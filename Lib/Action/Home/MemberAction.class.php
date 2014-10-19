@@ -19,7 +19,7 @@ class MemberAction extends Action{
 		$mid=$_SESSION['mid'];
 		
 		if(empty($userid) or empty($mid)){
-			$this->redirect('index/index');//session为空  跳转到首页登录
+			$this->redirect('Index/index');//session为空  跳转到首页登录
 		}
 		
 		$member=$this->member();

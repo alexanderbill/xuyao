@@ -649,7 +649,7 @@ A.daobg01Cl:hover {
 	WIDTH: 280px; FLOAT: right
 }
 .PleftM {
-	WIDTH: 650px; FLOAT: left
+	WIDTH: 950px; FLOAT: left
 }
 .titseach {
 	BORDER-BOTTOM: #efe7bc 1px solid; BORDER-LEFT: #efe7bc 1px solid; PADDING-BOTTOM: 1px; MARGIN: 2px 0px 2px 2px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; BACKGROUND: url(../images/anbg.gif) no-repeat right bottom; BORDER-TOP: #efe7bc 1px solid; BORDER-RIGHT: #efe7bc 1px solid; PADDING-TOP: 1px
@@ -1972,7 +1972,7 @@ A.linkku:hover {
 	TEXT-DECORATION: none !important
 }
 .tleft {
-	WIDTH: 705px; FLOAT: left; HEIGHT: auto
+	WIDTH: 950px; FLOAT: left; HEIGHT: auto
 }
 .tright {
 	WIDTH: 240px; FLOAT: right
@@ -2005,7 +2005,7 @@ A.linkku:hover {
 	TEXT-DECORATION: underline
 }
 .jytit01 {
-	LINE-HEIGHT: 25px; WIDTH: 702px; BACKGROUND: url(../images/tit03.jpg) repeat-x; HEIGHT: 25px; CLEAR: both; VERTICAL-ALIGN: middle
+	LINE-HEIGHT: 25px; WIDTH: 950px; BACKGROUND: url(../images/tit03.jpg) repeat-x; HEIGHT: 25px; CLEAR: both; VERTICAL-ALIGN: middle
 }
 .jytit01 H2 {
 	DISPLAY: inline
@@ -2071,7 +2071,7 @@ A.linkku:hover {
 	PADDING-BOTTOM: 5px; WIDTH: 700px; DISPLAY: block; MARGIN-BOTTOM: 5px; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 5px
 }
 .seacbg2 {
-	PADDING-BOTTOM: 5px; WIDTH: 700px; DISPLAY: block; MARGIN-BOTTOM: 5px; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 5px
+	PADDING-BOTTOM: 5px; WIDTH: 900px; DISPLAY: block; MARGIN-BOTTOM: 5px; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 5px
 }
 .seacbg2 DIV EM {
 	PADDING-BOTTOM: 3px; FONT-STYLE: normal; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: block; BACKGROUND: url(../images/fl.jpg) #fed18e no-repeat; PADDING-TOP: 3px
@@ -2200,7 +2200,7 @@ A.linkku:hover {
 	MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 228px !important; PADDING-RIGHT: 5px; DISPLAY: block; BACKGROUND: #fefdfa; FLOAT: left; BORDER-RIGHT: #999 1px dotted
 }
 .seacbg2 .school {
-	MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 250px !important; PADDING-RIGHT: 5px; DISPLAY: block; BACKGROUND: #fefdfa; FLOAT: left; BORDER-RIGHT: #999 1px dotted
+	MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 900px !important; PADDING-RIGHT: 5px; DISPLAY: block; BACKGROUND: #fefdfa; FLOAT: left; BORDER-RIGHT: #999 1px dotted
 }
 .fenlei {
 	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; MARGIN: 0px; PADDING-LEFT: 5px; WIDTH: 190px; PADDING-RIGHT: 5px; DISPLAY: block; BACKGROUND: #fefdfa; FLOAT: left; BORDER-TOP: medium none; BORDER-RIGHT: medium none

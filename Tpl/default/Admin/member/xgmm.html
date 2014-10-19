@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+
+<form action="__URL__/update_password" method="POST">
+    <table  class="border00" width="700" height="43" border="0" cellpadding="0" cellspacing="0">
+ 
+      <tr>
+        <td height="30" align="center" valign="middle">登录账号：{$member.ttedu_username}</td>
+      </tr>
+	  <tr>
+        <td height="30" align="center" valign="middle">原始密码：
+          <input name="old_pass" id="old_pass" type="password" class="zcinput"/></td>
+      </tr>
+      <tr>
+        <td height="30" align="center" valign="middle">输入新密码：
+          <input name="new_password" id="new_password" type="password" class="zcinput"/></td>
+      </tr>
+      <tr>
+        <td height="30" align="center" valign="middle">确认新密码：
+          <input name="renew_password" id="renew_password" type="password" class="zcinput"/></td>
+      </tr>
+      <tr>
+        <td height="30" align="center" valign="middle"><span class="ac">
+          <input name="button2" type="submit" class="butblue" id="button2" value=" 提 交 " />
+        </span></td>
+      </tr>
+    </table>
+</form>
+
+
+
+		  
+</body></html>

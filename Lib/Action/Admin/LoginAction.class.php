@@ -14,7 +14,7 @@ public function _initialize(){
 public function login(){
 	$admin=$_SESSION['admin'];
 	if(!empty($admin)){
-		$this->redirect('index/index');
+		$this->redirect('Index/index');
 	}
 	$this->display();
 }
@@ -34,7 +34,7 @@ public function loginpass(){
 	$admin=$TheObj->where($map)->find();
 	if(!empty($admin)){
 		$_SESSION['admin']=$admin;
-		$this->redirect('index/index');
+		$this->redirect('Index/index');
 	}else{
 		echo "<script>alert('用户名或密码错误！');history.go(-1);</script>";
 	}

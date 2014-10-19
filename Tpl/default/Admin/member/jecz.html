@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<table width="98%" border="0" cellpadding="0" cellspacing="3" class="tablewhite">
+      <tr>
+        <td height="30" align="left" valign="bottom"><strong class="font14"><font color="green">会员充值</font></strong></td>
+      </tr>
+    </table>
+	  
+<table width="98%" border="0" cellpadding="10" cellspacing="2" class="greenborder">
+<form action="__URL__/add_chongzhi" method="post">
+<tr><td width="22%">用户姓名：</td>
+<td width="18%">{$member.ttedu_chenfu} </td>
+<td width="13%">当前余额:</td>
+<td width="47%">{$member.ttedu_shengyujinge}&nbsp;元</td>
+</tr>
+<tr><td>请选择充值方式：</td>
+<td colspan="2"><input name="chongzhi_type" type="radio" value="1" checked="checked">&nbsp;支付宝&nbsp; 
+	<input name="chongzhi_type" type="radio" value="2">&nbsp;财付通&nbsp; 
+	<input name="chongzhi_type" type="radio" value="3">&nbsp;网银&nbsp; </td>
+<td><input type="submit" name="Submit2" value=" 确 认 "></td></tr>
+<tr><td>支付银行（网银）：</td><td colspan="3"><div>
+<table width="98%" border="0" cellpadding="1" cellspacing="2" class="greenborder">
+	<volist name="set_yinghang_info" id="vo" key="k">
+	<tr><td><input type="radio" name="bankid" value="{$vo.ttedu_id}">&nbsp;银行卡 {$k}  ：&nbsp;&nbsp;{$vo.ttedu_kaihuhang}</td></tr>
+	</volist>
+</table>
+
+</div></td></tr>
+</form>
+</table>	  
+
+
+
+
+
+
+<table width="98%" border="0" cellspacing="0" cellpadding="10">
+	<tr><td height="30" align="left" valign="bottom"><strong class="font14"><font color="green">充值记录</font></strong></td></tr>
+	<eq name="chongzhi_detail" value="">
+	<tr><td>没有充值记录</td></tr>
+	<else/>
+	<tr><td><table width="98%" border="0" cellspacing="0" cellpadding="5">
+		<tr><td>序号</td><td>充值金额</td><td>充值时间</td><td>备注</td></tr>
+		<volist name="chongzhi_detail" id="vo">
+		<tr><td>{$vo.ttedu_id}</td><td>{$vo.ttedu_chongzhijinge}</td><td>{$vo.ttedu_adddates|date='Y-m-d H:i:s',###}</td><td>{$vo.ttedu_beizhu}</td></tr>
+		</volist>
+	</table></td></tr>
+	</eq>
+	<tr><td>{$page}</td></tr>
+</table>
+
+
+		  
+</body></html>

@@ -1,0 +1,30 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+<div style="margin-left:200px; font-size:14px;">评论教员</div>
+<div>
+<form action="__URL__/pinglun" method="post">
+<input type="hidden" name="ttedu_teachid" value="{$ttedu_teachid}">
+<input type="hidden" name="ttedu_userid" value="{$member.ttedu_id}">
+评价：
+<input type="radio" name="ttedu_jibie" value="1">很差&nbsp;
+<input type="radio" name="ttedu_jibie" value="2">差&nbsp;
+<input type="radio" name="ttedu_jibie" value="3" checked="checked">一般&nbsp;
+<input type="radio" name="ttedu_jibie" value="4">好&nbsp;
+<input type="radio" name="ttedu_jibie" value="5">很好&nbsp;<br/><br/>
+内容：<textarea name="ttedu_content" rows="3" cols="40"></textarea>
+<br/><br/>
+<input type="submit" value="确定提交">
+</form>
+</div>		  
+</body></html>

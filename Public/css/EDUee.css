@@ -592,13 +592,13 @@ A.daobg01Cl:hover {
 	BORDER-BOTTOM: medium none
 }
 .leftM {
-	WIDTH: 706px; FLOAT: right
+	WIDTH: 700px; FLOAT: right
 }
 .LleftM {
 	WIDTH: 240px; FLOAT: right
 }
 .LrightM {
-	WIDTH: 705px; FLOAT: right
+	WIDTH: 950px; FLOAT: right
 }
 .leftM1 {
 	WIDTH: 495px; FLOAT: left
@@ -2209,7 +2209,7 @@ A.linkku:hover {
 	WIDTH: 233px !important
 }
 .seacbg2long {
-	WIDTH: 240px !important
+	WIDTH: 660px !important
 }
 
 

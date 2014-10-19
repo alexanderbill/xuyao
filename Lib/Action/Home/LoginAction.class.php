@@ -61,9 +61,9 @@ class LoginAction extends Action{
 			}
 			
 			if($types==1){
-				$this->redirect('index/index');
+				$this->redirect('Index/index');
 			}else{
-				$this->redirect('index/index');
+				$this->redirect('Index/index');
 			}
 		}else{
 			echo "<script>alert('用户名或者密码错误！');history.go(-1)</script>";
@@ -77,7 +77,7 @@ class LoginAction extends Action{
 		$_SESSION['userid']="";
 		$_SESSION['mid']="";
 		$_SESSION['username']="";
-		$this->redirect('index/index');
+		$this->redirect('Index/index');
 	}
 	
 	

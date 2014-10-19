@@ -3,7 +3,7 @@
 return array(
     
 'URL_MODEL'=>3, // 如果你的环境不支持PATHINFO 请设置为3
-'APP_DEBUG' => true, // 开启调试模式
+'APP_DEBUG' => false, // 开启调试模式
 'DB_TYPE'=> 'mysql', // 数据库类型
 'DB_HOST'=> 'localhost', // 数据库朋务器地址
 'DB_NAME'=>'teach_data', // 数据库名称

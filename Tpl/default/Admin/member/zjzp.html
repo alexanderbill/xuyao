@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+
+<div class="photo">
+<div class="manage">证件管理</div>
+<div class="photoint">
+  <p class="red"><strong>【提示信息】   </strong></p>
+  <p>（1）大学生、研究生教员：身份证、学生证；专职教师：身份证、教师资格证、最高学历毕业证；在职教师：身份证、教师资格证、工作证或聘用合同、最高学历毕业证；其他教员：身份证、最高学历毕业证；以上为各类型教员必须提供的证件，为了更全面地向学员展示自己的优势，获得更多被推荐机会，还可上传一些体现能力的等级证书和获奖证明，,如外语、计算机等。照片上的证件号码务必拍摄清晰，大小不超过500k，支持格式有：jpg、gif、png等。</p>
+  <p>（2）本网站提供{$member.ttedu_yxzhaopiancounts}张证件照片（证件照严格保密，若要公开等级证书和获奖证明,请在&quot;照片管理&quot;内上传），<strong class="red">一旦发现上传非本人证件，即封帐号。</strong></p>
+  
+  
+  
+  <table width="100%" border="0" cellpadding="0" cellspacing="5">
+  	<tr><td>我的上传照片：</td></tr>
+	<volist name="pic_zj" id="vo" mod="3">
+	<eq name="mod" value="1"><tr></eq>
+	<td height="30" align="left">
+		<img src="Public/Uploads/{$vo.ttedu_pic}" width="140" height="120" border="0" alt="{$vo.ttedu_beizhu}">
+		<p>
+		<eq name="vo.ttedu_typename" value="0">个人照片</eq>
+		<eq name="vo.ttedu_typename" value="1">身份证</eq>
+		<eq name="vo.ttedu_typename" value="2">学生证</eq>
+		<eq name="vo.ttedu_typename" value="3">毕业证</eq>
+		<eq name="vo.ttedu_typename" value="4">教师资格证</eq>
+		<eq name="vo.ttedu_typename" value="5">其他证件</eq>
+		<a href="__URL__/delete_photo/ttedu_id/{$vo.ttedu_id}">删除</a></p>
+	</td>
+	<eq name="mod" value="3"></tr></eq>
+	</volist>
+	</table>
+  
+  
+  
+  <table class="ptable fl" width="747" border="0" cellspacing="0" cellpadding="0">
+       <tr bgcolor="#f1fafc">
+      <td height="25" colspan="6" align="left" valign="middle">你已经上传了 {$count}  张照片，还可以上传  {$count2} 张照片。</td>
+      </tr>
+    <tr bgcolor="#f1fafc">
+    <form enctype="multipart/form-data" action="__URL__/up_photo" method="post">
+	  <input type="hidden" name="count2" value="{$count2}">
+	  <input type="hidden" name="ttedu_teachid" value="{$member.ttedu_id}">
+      <td height="25" colspan="6" align="left" valign="middle"> 请选择上传得照片文件：
+        <input name="image" id="image" type="file" class="file huge" />&nbsp;上传允许文件类型：gif png jpg 图像文件<br>
+        证件类型：<select name="ttedu_typename">  
+                	<option value="1">身份证</option>
+                	<option value="2">学生证</option>
+                	<option value="3">毕业证</option>
+                	<option value="4">教师资格证</option>
+                	<option value="5">其他证件</option>
+                </select>
+		<br>备注：<br>
+		<textarea name="ttedu_beizhu" rows="3" cols="40"></textarea><br>  
+        <input type="submit" name="btnSubmit" value="上传" id="btnSubmit"  style="width:64px;" /></td>
+        </form>
+      </tr>
+  </table>
+</div>
+</div>
+		  
+</body></html>

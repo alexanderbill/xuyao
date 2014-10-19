@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<table width="98%" border="0" cellpadding="0" cellspacing="3" class="tablewhite">
+      <tr>
+        <td height="30" align="left" valign="bottom"><strong class="font14"><font color="green">银行卡提现</font></strong></td>
+      </tr>
+    </table>
+      <table width="98%" border="0" cellpadding="10" cellspacing="2" class="greenborder">
+ 
+<form action="#" method="post" name="tixianbank" id="tixianbank">
+<tr>
+  <td>可提现金额:0.00元<br>
+  提现金额：<input name="money" type="text" id="money" onKeyPress="event.returnValue=IsDigit();" size="5" maxlength="5">元 (<span style="color:#ff0000">提现手续费2%，最低4元。例如提现200元，实际到帐为196元</span>)<br>
+    开户银行：<select name="yinhang" id="yinhang" style="width:150px;">
+      <option value="请选择" selected>请选择</option>
+      <option value="建设银行">建设银行</option>
+      <option value="中国银行">中国银行</option>
+    </select>
+    (<span style="color:#ff0000">目前只能从这三个银行提现</span>)<br>
+    开户姓名：<input name="textfield" type="text" value="" style="width:150px;" disabled="disabled"><br>
+    银行卡号：<input name="zhanghao" type="text" id="zhanghao" onKeyPress="event.returnValue=IsDigit();" size="20" maxlength="30" style="width:150px;">
+(<span style="color:#ff0000">不能是存折、信用卡，外地卡</span>)<br>
+ 　　　　　<input type="submit" name="Submit2" value="　提　交　" onClick="return checkbank();"></td>
+</tr>
+</form>
+      </table>
+
+<table width="98%" border="0" cellspacing="0" cellpadding="10">
+	<tr>
+	  	<td height="30" align="left" valign="bottom"><strong class="font14"><font color="green">提现记录</font></strong></td>
+	</tr>
+	<tr>
+		<td>没有提现记录</td>
+	</tr>
+</table>
+
+
+		  
+</body></html>

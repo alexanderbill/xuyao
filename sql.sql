@@ -641,7 +641,7 @@ INSERT INTO `set_liuyan` VALUES ('3', '1111', '234676324', '46y2345@degf.com', '
 INSERT INTO `set_pay_info` VALUES ('1', '支付宝', '支付宝很烂', 'z123456', 'z654321', '2', '', '0', '1', '0');
 INSERT INTO `set_pay_info` VALUES ('2', '财付通', '财付通也很烂', '1900000109', '8934e7d15453e97507ef794cf7b0519d', '3', '', '0', '2', '1');
 INSERT INTO `set_pay_info` VALUES ('3', '网银', '网银更烂', '1001', 'test', '4', '', '0', '3', '1');
-INSERT INTO `set_web_info` VALUES ('1', '助教网--北京站', '助教网', '助教网--北京', 'dfg', 'www.intoot.com', '53256', '876543', 'asdfghl', 'asdf', '0', '系统维护');
+INSERT INTO `set_web_info` VALUES ('1', '助教网', '助教网', '助教网', 'dfg', '', '', '', '', '', '0', '系统维护');
 INSERT INTO `set_yinghang_info` VALUES ('1', '中国建设银行', 'asdgf ', '123', '银行信用卡', '', '0');
 INSERT INTO `set_yinghang_info` VALUES ('2', '中农业银行', 'bbb', '456', '银行信用卡', '3456', '0');
 INSERT INTO `set_yinghang_info` VALUES ('3', '中农业银行', 'aaa', '789', '银行信用卡', '976', '1');

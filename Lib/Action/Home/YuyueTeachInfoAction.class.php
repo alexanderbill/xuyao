@@ -64,7 +64,7 @@ public function _initialize(){
 	  	$TheObj->Create();//创建数据对象
 	  	$result=$TheObj->add();//写入数据库
 		echo "<script>alert('预约成功！');</script>";
-	  	$this->redirect('index/index');//成功后重定向
+	  	$this->redirect('Index/index');//成功后重定向
 	  }
     }
 	
