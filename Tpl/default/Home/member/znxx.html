@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+<tr><td align="center" height="40" style="font-size:14px; border-bottom:1px solid #66CC99">留言回复</td></tr>
+
+<volist name="set_liuyan" id="vo">
+<tr>
+  <td height="25" colspan="2"><table width="95%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #66CC99">
+    <tr>
+      <td width="12%" height="30" align="right">留言标题：</td>
+      <td width="28%" align="left">{$vo.ttedu_title}</td>
+      <td width="10%" height="30" align="right">留言时间：</td>
+      <td width="19%" align="left">{$vo.ttedu_lydate|date='Y-m-d H:i:s',###}</td>
+	  <td width="11%" height="30" align="right">回复时间：</td>
+      <td width="20%" align="left"><neq name="vo.ttedu_hfdate" value="">{$vo.ttedu_hfdate|date='Y-m-d H:i:s',###}</neq></td>
+    </tr>
+    <tr>
+      <td align="right" height="30">留言内容：</td>
+      <td align="left" colspan="5">{$vo.ttedu_content}</td>
+    </tr>
+    <tr>
+      <td align="right" height="30">回复内容：</td>
+      <td align="left" colspan="5"><neq name="vo.ttedu_hfmessage" value="">{$vo.ttedu_hfmessage}<else/>未回复</neq></td>
+    </tr>
+  </table></td>
+</tr>
+</volist>
+<tr><td height="30" align="center">{$page}</td></tr>
+</table>
+
+</body></html>

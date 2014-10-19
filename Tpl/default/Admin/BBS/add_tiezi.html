@@ -1,0 +1,81 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="images/style.css">
+<title>修改课程</title>
+<script type="text/javascript" charset="utf-8" src="Public/admin/edit/kindeditor-min.js"></script>
+<script type="text/javascript">
+KE.show({
+	id : 'content1',
+	cssPath : './../index.css'
+});
+</script>
+
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<form  name="add" method="post" action="__URL__/insert_tiezi" enctype="multipart/form-data">
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">添加帖子</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">帖子标题</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_shequ_title" type="text" value="" size="30"  /></td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">主题</td>
+        <td width="84%"  class="td">
+          <select name="ttedu_zhuti_id">
+		  <volist name="shequ_zhuti" id="vo">
+		  <option value="{$vo.ttedu_id}">{$vo.ttedu_zhuti_topic}</option>
+		  </volist>
+		  </select></td> 
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">是否置顶</td>
+        <td width="84%"  class="td">
+		<input type="radio" name="ttedu_shifouzhiding" value="1" />&nbsp;置顶&nbsp;
+		<input type="radio" name="ttedu_shifouzhiding" value="0" checked/>&nbsp;不置顶&nbsp;
+		</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">是否热帖</td>
+        <td width="84%"  class="td">
+		<input type="radio" name="ttedu_shifouretie" value="1"/>&nbsp;是&nbsp;
+		<input type="radio" name="ttedu_shifouretie" value="0" checked/>&nbsp;否&nbsp;
+		</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">是否需要审核</td>
+        <td width="84%"  class="td">
+		<input type="radio" name="ttedu_shifoushenghe" value="1" checked/>&nbsp;是&nbsp;
+		<input type="radio" name="ttedu_shifoushenghe" value="0" />&nbsp;否&nbsp;
+		</td>
+      </tr>
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8">
+        <td height="25" class="td">帖子内容</td>
+        <td class="td"> <textarea id="content1" name="ttedu_tiezi_content" style="width:700px;height:400px;visibility:hidden;"></textarea></td>
+      </tr>
+    <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#FFFFFF'" bgcolor="#FFFFFF">
+        <td height="25" class="td">&nbsp;</td>
+        <td class="td"><input type="submit" name="button" id="button" value="确认提交"  class="btn"/></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+</body>
+</html>

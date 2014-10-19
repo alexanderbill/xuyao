@@ -1,0 +1,178 @@
+ 
+<!--头部部分-->
+<include file="Public:head_bbs" />
+
+
+<STYLE type=text/css>BODY {
+	TEXT-ALIGN: left; MARGIN: 0px; FONT: 400 12px/18px 宋体
+}
+FORM {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TD {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+TH {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+DIV {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+#hd {
+	ZOOM: 1
+}
+#hd .logo {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+#hd .sel {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+#hd .login {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; FLOAT: right; PADDING-TOP: 5px
+}
+#guide {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #6a9cff; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; COLOR: #fff; CLEAR: both; PADDING-TOP: 8px
+}
+#guide A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+#guide A:hover {
+	TEXT-DECORATION: underline
+}
+#main {
+	MARGIN: 0px 0px 0px -250px; WIDTH: 100%; FLOAT: left; OVERFLOW: hidden
+}
+#submain {
+	MARGIN: 0px 0px 0px 255px; WIDTH: 86%
+}
+#side {
+	TEXT-ALIGN: right; WIDTH: 250px; FLOAT: right; OVERFLOW: hidden
+}
+#pg {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 0px; WIDTH: 94%; PADDING-RIGHT: 0px; FLOAT: right; OVERFLOW: hidden; PADDING-TOP: 20px
+}
+#send {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 0px; WIDTH: 94%; PADDING-RIGHT: 0px; FLOAT: right; OVERFLOW: hidden; PADDING-TOP: 20px
+}
+#pg {
+	PADDING-BOTTOM: 0px; FONT-SIZE: 14px
+}
+#ft {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #e0e0e0; PADDING-LEFT: 5px; WIDTH: 100%; PADDING-RIGHT: 5px; CLEAR: both; PADDING-TOP: 5px
+}
+#p {
+	WIDTH: 420px
+}
+.pl {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; WIDTH: 68px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 2px
+}
+.pr {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; WIDTH: 352px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 2px
+}
+.box {
+	WIDTH: 100%
+}
+.lou {
+	TEXT-ALIGN: center; MARGIN-TOP: 20px; WIDTH: 6%; FLOAT: left; COLOR: #0000ff; FONT-SIZE: 14px
+}
+.msg {
+	MARGIN-TOP: 20px; WIDTH: 94%; FLOAT: left; FONT-SIZE: 14px; WORD-BREAK: break-all
+}
+.bt {
+	COLOR: #0000ff; FONT-SIZE: 14px
+}
+.usr {
+	BORDER-BOTTOM: gray 1px dashed; TEXT-ALIGN: right; PADDING-BOTTOM: 5px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 5px
+}
+.usr SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 20px; PADDING-RIGHT: 20px; COLOR: gray; PADDING-TOP: 0px
+}
+</STYLE>
+
+
+<DIV id=guide><A href="__URL__/index">社区首页</A> &gt; {$shequ_info.ttedu_shequ_title}</DIV>
+<DIV id=main>
+<DIV id=submain>
+<DIV class=box>
+<DIV class=lou>楼主</DIV>
+<DIV class=msg>
+<DIV class=bt>{$shequ_info.ttedu_shequ_title}</DIV>
+
+<div>{$shequ_info.ttedu_tiezi_content}</div>
+
+<DIV class=usr>作者
+<volist name="shequ_info['person']" id="person" offset="0" length="1">
+	<compare name="person.mid" value="1" type="eq">
+	<a href="__APP__/TeachInfo/tehdetail/id/{$person.id}" style="color:#0000ff" target=_blank>{$person.name}（{$person.id}）</a>
+	</compare>
+	<compare name="person.mid" value="2" type="eq">
+	<a href="__APP__/HuiyuanInfo/huiyuandetail/id/{$person.id}" style="color:#0000ff">{$person.name}（{$person.id}）</a>
+	</compare>
+</volist>
+<SPAN>{$shequ_info.ttedu_fbdate|date='Y-m-d H:i:s',###}</SPAN>
+</DIV></DIV></DIV>
+
+
+<volist name="shequ_reply_info" id="shequ_reply_info" mod="2" key="k">
+<DIV class=box>
+<DIV class=lou>{$k}楼</DIV>
+<DIV class=msg>{$shequ_reply_info.ttedu_reply_content}
+<DIV class=usr>回复作者：
+<eq name="shequ_reply_info['person']" value="">
+	匿名
+<else/>
+	<volist name="shequ_reply_info['person']" id="person" offset="0" length="1">
+		<compare name="person.mid" value="1" type="eq">
+		<a href="__APP__/TeachInfo/tehdetail/id/{$person.id}" style="color:#0000ff" target=_blank>{$person.name}（{$person.id}）</a>
+		</compare>
+		<compare name="person.mid" value="2" type="eq">
+		<a href="__APP__/HuiyuanInfo/huiyuandetail/id/{$person.id}" style="color:#0000ff">{$person.name}（{$person.id}）</a>
+		</compare>
+	</volist>
+</eq>
+<SPAN>{$shequ_reply_info.ttedu_fbdate|date='Y-m-d H:i:s',###}</SPAN>
+</DIV></DIV></DIV>
+</volist>
+
+
+<DIV id=pg>{$page3}</DIV>
+<DIV id=send>
+
+<form action="__URL__/add_reply" method="post">
+<input type="hidden" value="{$shequ_info.ttedu_id}" name="ttedu_info_id">
+<eq name="user" value="">
+<div style="margin-left:24px;">署名：&nbsp;&nbsp;匿名&nbsp;&nbsp;[<a href="#">登录</a>]</div>
+<else/>
+<div style="margin-left:24px;">署名：&nbsp;&nbsp;
+	<volist name="user" id="person" offset="0" length="1">
+		<span style="color:#0000ff">{$person.name}</span>
+		<input type="hidden" value="{$person.id}" name="ttedu_userid">
+		<input type="hidden" value="{$person.mid}" name="ttedu_mid">
+	</volist>
+</div>
+</eq>
+<div>回复内容：</div>
+<div style="margin-left:58px;"><textarea name="ttedu_reply_content" rows="5" cols="60"></textarea></div>
+<div style="margin-left:90px; margin-top:20px;"><input type="submit" value="提交"></div>
+</form>
+
+</DIV></DIV></DIV>
+
+
+<DIV id=side></DIV>
+<DIV id=ft>助教·北京家教网 &copy;2003-2011</DIV>
+
+
+</BODY></HTML>

@@ -1,0 +1,80 @@
+<include file="Public:head2" />
+
+
+<DIV class="main  mainbg clearfix">
+<DIV class=PleftM>
+<DIV class=rcur>
+<P><STRONG>当前位置：</STRONG>
+<A href="__APP__/index/index">首页</A>&gt;
+<A href="__URL__/downloadlist/ttedu_btype_id/{$btype_down.ttedu_id}">{$btype_down.ttedu_btype_name}</A> &gt; 
+<STRONG>{$info_down.ttedu_title}</STRONG></P></DIV>
+<DIV class=tit01>
+<DIV id=cont style="height:470px;">
+<H1>{$info_down.ttedu_title}</H1>
+
+<div style="border-bottom:1px solid #cccccc; text-align:center;">
+<span>下载权限：<eq name="info_down.ttedu _shifouzhuce" value="0">所有用户 <else/><font color="#006600">注册用户</font></eq>
+
+</span>
+<span>上传时间：{$info_down.ttedu_sgdate||date='Y-m-d H:i:s',###}</span>
+<span style="margin-left:30px;"><eq name="$info_down.ttedu _shifouzhuce" value="1">你不是注册用户，你不能下载 </eq><a href="Public/Uploads/{$info_down.ttedu_fujian}" style="color:#ff0000">下载资源</a></span>
+</div>
+<br />
+<div>
+<p>资源介绍：</p>
+<br />
+{$info_down.ttedu_content}
+</div>
+
+
+
+
+<DIV class=hackbox></DIV></DIV>
+
+<DIV class=tit01>
+<DIV class=zxtit01T3><IMG src="Public/images/d10.gif"> 
+<H2>相关文章</H2></DIV>
+<OL style="WIDTH: 80%" class="line01 fl">
+
+<volist name="info_detail_other" id="vo">
+ <LI><SPAN class=green>-{$vo.ttedu_sgdate|date='Y-m-d',###}-</SPAN><A href="__URL__/downloaddetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>  
+  
+</OL>
+
+<DIV class=hackbox></DIV></DIV></DIV></DIV><!--中部左区结束，右区开始-->
+<DIV class=PrightM>
+<DIV class=tit01>
+<DIV>
+<DIV class=tit01>
+<DIV class=zxtit01T2>
+<H2><IMG src="Public/images/d03.gif">本站搜索</H2></DIV>
+<DIV>
+<DIV class=s01>
+<FORM method=post action="__APP__/index/mfsearch">
+<input type="hidden" name="types" value="5" />
+<INPUT class=seainpu 
+onclick="this.value=''" value="信息标题" size=10 type=text name="titles"> 
+<SELECT style="WIDTH: 95px" id=select3 class=input_text name="subject"> 
+<OPTION selected 
+  value="">所有文章</OPTION> <OPTION value=15>新闻动态</OPTION> <OPTION 
+  value=17>助教公告</OPTION> <OPTION value=18>小学教育</OPTION> <OPTION 
+  value=19>初中教育</OPTION> <OPTION value=20>高中教育</OPTION> <OPTION 
+  value=21>中考咨询</OPTION> <OPTION value=22>高考咨询</OPTION> <OPTION 
+  value=23>常见问题</OPTION> <OPTION value=24>心灵沟通</OPTION> <OPTION 
+  value=25>好书推荐</OPTION> <OPTION value=26>家教之路</OPTION> <OPTION 
+  value=27>其他咨询</OPTION> </SELECT> <SPAN 
+class=seacbg1><INPUT id=imageField src="Public/images/but.gif" type=image 
+name=imageField> </SPAN></FORM>
+
+</DIV></DIV></DIV></DIV></DIV>
+
+
+  <include file="Public:right_info" />  
+  
+</DIV><!--主区结束，底区开始--><!--友情链接-->
+
+
+
+
+<include file="Public:foot" />

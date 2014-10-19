@@ -1,0 +1,114 @@
+.jyleft {
+	BACKGROUND-IMAGE: url(../images/jybg.gif); MARGIN-TOP: 5px; WIDTH: 177px; FLOAT: left; HEIGHT: 467px
+}
+.dh1 {
+	MARGIN-TOP: 5px; WIDTH: 150px; HEIGHT: 22px
+}
+.dh2 {
+	MARGIN-TOP: 5px; WIDTH: 150px; HEIGHT: 22px
+}
+.dh3 {
+	MARGIN-TOP: 5px; WIDTH: 150px; HEIGHT: 22px
+}
+.dh1 A {
+	MARGIN: 5px 0px 0px 40px; FLOAT: left; LETTER-SPACING: 5px; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.dh2 A {
+	MARGIN: 5px 0px 0px 40px; FLOAT: left; LETTER-SPACING: 5px; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.dh3 A {
+	MARGIN: 5px 0px 0px 40px; FLOAT: left; LETTER-SPACING: 5px; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+.dh1 {
+	BACKGROUND-IMAGE: url(../images/jycd1.gif)
+}
+.dh2 {
+	BACKGROUND-IMAGE: url(../images/jycd2.gif)
+}
+.dh3 {
+	BACKGROUND-IMAGE: url(../images/jycd3.gif)
+}
+.jyright {
+	BACKGROUND-IMAGE: url(../images/jybg2.gif); MARGIN-TOP: 5px; WIDTH: 756px; FLOAT: left; HEIGHT: 87px; MARGIN-LEFT: 10px
+}
+.jyt1 {
+	BACKGROUND-IMAGE: url(../images/jyt1.gif); TEXT-ALIGN: center; LINE-HEIGHT: 29px; MARGIN-TOP: 8px; WIDTH: 191px; LETTER-SPACING: 3px; HEIGHT: 29px; COLOR: #ffffff; FONT-SIZE: 14px; VERTICAL-ALIGN: middle; FONT-WEIGHT: bold
+}
+.jyxx {
+	BORDER-BOTTOM: #e7f9fd 3px solid; BORDER-LEFT: #e7f9fd 3px solid; MARGIN-TOP: 5px; WIDTH: 750px; FLOAT: left; HEIGHT: auto; MARGIN-LEFT: 10px; BORDER-TOP: #e7f9fd 3px solid; BORDER-RIGHT: #e7f9fd 3px solid
+}
+.zp {
+	BORDER-BOTTOM: #e7f9fd 1px solid; TEXT-ALIGN: center; BORDER-LEFT: #e7f9fd 1px solid; MARGIN-TOP: 9px; WIDTH: 160px; HEIGHT: 180px; MARGIN-LEFT: 150px; BORDER-TOP: #e7f9fd 1px solid; BORDER-RIGHT: #e7f9fd 1px solid
+}
+.yjgg {
+	BORDER-BOTTOM: #e7f9fd 2px solid; BORDER-LEFT: #e7f9fd 2px solid; PADDING-BOTTOM: 6px; MARGIN-TOP: 8px; WIDTH: 500px; FLOAT: left; HEIGHT: auto; MARGIN-LEFT: 10px; BORDER-TOP: #e7f9fd 2px solid; BORDER-RIGHT: #e7f9fd 2px solid
+}
+.nr {
+	TEXT-ALIGN: center; LINE-HEIGHT: 20px; COLOR: #996600
+}
+.jyred {
+	COLOR: #f00; FONT-SIZE: 14px; FONT-WEIGHT: bold !important
+}
+.jyggw {
+	MARGIN-TOP: 20px; WIDTH: 240px; FLOAT: left; HEIGHT: auto; MARGIN-LEFT: 10px
+}
+.jyta {
+	BORDER-BOTTOM: #e7f9fd 1px solid; BORDER-LEFT: #e7f9fd 1px solid; BORDER-TOP: #e7f9fd 1px solid; BORDER-RIGHT: #e7f9fd 1px solid
+}
+A.daolist {
+	BORDER-BOTTOM: #fef5c5 1px solid; BORDER-LEFT: #fef5c5 1px solid; PADDING-BOTTOM: 3px; MARGIN: 6px 15px; PADDING-LEFT: 32px; PADDING-RIGHT: 3px; DISPLAY: block; BACKGROUND: url(../images/anbg.gif) #fefef1 no-repeat 10px -638px; LETTER-SPACING: 2px; BORDER-TOP: #fef5c5 1px solid; BORDER-RIGHT: #fef5c5 1px solid; PADDING-TOP: 5px
+}
+A.daolist:visited {
+	BORDER-BOTTOM: #fef5c5 1px solid; BORDER-LEFT: #fef5c5 1px solid; PADDING-BOTTOM: 3px; MARGIN: 6px 15px; PADDING-LEFT: 32px; PADDING-RIGHT: 3px; DISPLAY: block; BACKGROUND: url(../images/anbg.gif) #fefef1 no-repeat 10px -638px; LETTER-SPACING: 2px; BORDER-TOP: #fef5c5 1px solid; BORDER-RIGHT: #fef5c5 1px solid; PADDING-TOP: 5px
+}
+A.daolist:hover {
+	BORDER-BOTTOM: #d2ffa7 1px solid; BORDER-LEFT: #d2ffa7 1px solid; BACKGROUND: url(../images/anbg.gif) #f1ffe1 no-repeat 11px -672px; COLOR: #247500; BORDER-TOP: #d2ffa7 1px solid; BORDER-RIGHT: #d2ffa7 1px solid
+}
+A.daolistc {
+	BORDER-BOTTOM: #d2ffa7 1px solid; BORDER-LEFT: #d2ffa7 1px solid; BACKGROUND: url(../images/anbg.gif) #f1ffe1 no-repeat 11px -672px; COLOR: #247500; BORDER-TOP: #d2ffa7 1px solid; BORDER-RIGHT: #d2ffa7 1px solid
+}
+A.daolistc {
+	PADDING-BOTTOM: 3px; MARGIN: 6px 15px; PADDING-LEFT: 32px; PADDING-RIGHT: 3px; DISPLAY: block; LETTER-SPACING: 2px; PADDING-TOP: 5px
+}
+.table {
+	WIDTH: 745px; TABLE-LAYOUT: fixed
+}
+.titlebg {
+	BACKGROUND-COLOR: #66ccff; HEIGHT: 25px
+}
+.trbgc {
+	BACKGROUND-COLOR: #edf9fc
+}
+.trbgc1 {
+	BACKGROUND-COLOR: #f8f8f8
+}
+.fenye {
+	MARGIN: 8px 0px 0px 560px; HEIGHT: 20px
+}
+.xiugai {
+	TEXT-ALIGN: center
+}
+.xiugai TEXTAREA {
+	MARGIN-TOP: 5px
+}
+.jltd {
+	BORDER-BOTTOM: #e3f6fb 1px solid; BORDER-RIGHT: #e3f6fb 1px solid
+}
+.jltd2 {
+	BORDER-BOTTOM: #e3f6fb 1px solid; BORDER-LEFT: #e3f6fb 1px solid; BORDER-RIGHT: #e3f6fb 1px solid
+}
+.zxxx {
+	LINE-HEIGHT: 25px; PADDING-LEFT: 12px; BACKGROUND: #66ccff; HEIGHT: 25px; COLOR: #666666; VERTICAL-ALIGN: middle; FONT-WEIGHT: bold
+}
+.zxxx A {
+	COLOR: #666; MARGIN-LEFT: 50px; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.zxxx A:hover {
+	COLOR: #333; FONT-WEIGHT: normal; TEXT-DECORATION: underline
+}
+.xxcont {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; TEXT-INDENT: 2em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 0px
+}
+.ZXmainbg {
+	MARGIN-TOP: 5px
+}

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="images/style.css">
+<title>设置管理</title> 
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style> 
+
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">设置管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="8">
+        <form id="form1" name="form1" method="post" action="#"> 
+     		<tr><td><input type="checkbox" name="" value="" />显示首页介绍</td></tr>
+			<tr><td><input type="checkbox" name="" value="" />显示任教学校
+				<span style="color:#777777">（有些地方不允许在职教师做家教，那你就可以选择不显示在职教师的任教学校）</span></td></tr>
+			<tr><td><input type="checkbox" name="" value="" />家教信息免费
+				<span style="color:#777777">（如果设置为免费，老师可以免费，获得联系方式，总站也可以帮忙验证家教信息）</span></td></tr>
+			<tr><td><input type="radio" name="tel" value="" checked="checked"/>不公开老师电话&nbsp;&nbsp;
+					<input type="radio" name="tel" value="" />公开所有老师电话</td></tr>
+			<tr><td>支付宝：<input type="text" name="" size="60" />（姓名+账号）</td></tr>
+			<tr><td><hr /></td></tr>
+			<tr><td>普通会员每月费用：<input type="text" name="" size="6"/>&nbsp;元（总站每月收取3元）</td></tr>
+			<tr><td>高级会员：<input type="radio" name="gjhuiyuan" value=""/>启用&nbsp;&nbsp;<input type="radio" name="gjhuiyuan" value="" checked="checked" />禁用
+					（在普通会员的基础上再显示电话，申请的月数只能在你的加盟期以内）</td></tr>
+			<tr><td>高级会员每月费用：<input type="text" name="" size="6"/>&nbsp;元（总站每月收取5元）</td></tr>
+			<tr><td><hr /></td></tr>
+			<tr><td>每天最多发送<input type="text" name="" value="0" size="6" />&nbsp;条家教信息手机通知（0代表不发送）</td></tr>
+			<tr><td><hr /></td></tr>
+			<tr><td>百度收录低于<input type="text" name="" value="50" size="6" />&nbsp;篇的链接强制转到内页（默认50篇，最高1000篇，最低10篇）</td></tr>
+			<tr><td>家教信息显示最近<input type="text" name="" value="0" size="6" />&nbsp;个月的信息（0代表全部）</td></tr>
+			<tr><td><hr /></td></tr>
+			<tr><td><br /><input type="submit" value="提交"/></td></tr>
+    </form></table></td>
+  </tr>
+</table>
+</body>
+</html>

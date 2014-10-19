@@ -1,0 +1,109 @@
+
+<include file="Public:head2" />
+
+
+
+<DIV class="main  mainbg clearfix">
+<DIV class=PleftM>
+<DIV class=rcur>
+<P><STRONG>当前位置：</STRONG><A href="__APP__/index/index">首页</A>&gt; <STRONG 
+class=red>重庆地区请家教</STRONG></P></DIV>
+<DIV class="tit01 clearfix">
+<DIV class=Ptit01T1><IMG src="Public/images/d10.gif"> <SPAN 
+class=tttext>发布家教信息</SPAN> </DIV>
+<div style="margin-left:200px;">带<STRONG class=red>*</STRONG>的为必填信息</div>
+<DIV class=loginb5>
+<FIELDSET>
+<FORM id=qingjiajiao onSubmit="return CheckValue(this)" name=qingjiajiao method=post action="__URL__/insert">
+<DIV class=btbg2><IMG src="Public/images/d19.gif"><STRONG>请填写您的联系方式 </STRONG></DIV>
+<DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>发布人称呼</LABEL> <INPUT id=contact_name 
+class=zcinput maxLength=15 size=30 type=text name=ttedu_chengfu> <SPAN 
+class=zsbg>例如:王女士</SPAN> </DIV>
+<DIV><LABEL for=checkbox>固定电话</LABEL> <INPUT id=contact_telephone class=zcinput 
+maxLength=50 size=30 type=text name=ttedu_zuoji value="{$member.ttedu_zuoji}"> <SPAN 
+class=zsbg>可填多个，请注明(宅、办)</SPAN> </DIV>
+<DIV><LABEL for=checkbox><STRONG class=red>*</STRONG>移动电话</LABEL> <INPUT id=contact_mobile class=zcinput 
+maxLength=50 size=30 type=text name=ttedu_shouji value="{$member.ttedu_shouji}"> <SPAN 
+class=zsbg>便于短信通知。该信息不会在网上公布</SPAN> </DIV>
+<DIV><LABEL for=checkbox>QQ号码</LABEL> <INPUT id=contact_telephone class=zcinput 
+maxLength=50 size=30 type=text name=ttedu_qq value="{$member.ttedu_qq}"> </DIV>
+<DIV><LABEL for=checkbox>email号码</LABEL> <INPUT id=contact_telephone class=zcinput 
+maxLength=50 size=30 type=text name=ttedu_email value="{$member.ttedu_email}"> </DIV>
+<DIV><LABEL for=confirm_password>您所在的位置地区</LABEL>
+<select name="ttedu_shoukediqu" id="teach_place">
+<option selected="selected" value="">请选择</option>
+					   <option value="海淀" >海淀</option>
+					   <option value="朝阳" >朝阳</option>
+					   <option value="东城" >东城</option>
+					   <option value="西城" >西城</option>
+					   <option value="崇文" >崇文</option>
+					   <option value="宣武" >宣武</option>
+					   <option value="丰台" >丰台</option>
+					   <option value="石景山" >石景山</option>
+					   <option value="房山" >房山</option>
+					   <option value="门头沟" >门头沟</option>
+					   <option value="通州" >通州</option>
+					   <option value="昌平" >昌平</option>
+					   <option value="密云" >密云</option>
+					   <option value="怀柔" >怀柔</option>
+					   <option value="延庆" >延庆</option>
+					   <option value="平谷" >平谷</option>
+					   <option value="大兴" >大兴</option>
+					   <option value="顺义" >顺义</option>
+			  </select>
+		  
+</DIV>
+<DIV><LABEL for=label>家庭住址</LABEL> <INPUT id=way1 class=zcinput size=35 
+name=ttedu_address> </SPAN><SPAN class=zsbg>填写您家庭的消息地址</SPAN> </DIV>
+<DIV><LABEL for=label>公交线路说明</LABEL> <INPUT id=way1 class=zcinput size=35 
+name=ttedu_nalugongjiao> </SPAN><SPAN class=zsbg>填写您家庭乘车路线</SPAN> </DIV>
+
+<DIV class=btbg2><IMG src="Public/images/d19.gif"><STRONG>请填写学员的基本信息</STRONG></DIV>
+<DIV><LABEL for=label>学生性别</LABEL>
+<INPUT value="男" type="radio" name="ttedu_sex" <eq name="member.ttedu_sex" value="男">checked</eq> > 男
+<INPUT value="女" type="radio" name="ttedu_sex" <neq name="member.ttedu_sex" value="男">checked</neq> > 女 </DIV>
+
+<DIV><LABEL for=label><STRONG class=red>*</STRONG>学生年龄</LABEL><input type="text" name="ttedu_old" class="zcinput" size="5" value="{$member.ttedu_old}"/>&nbsp;岁</DIV>
+<DIV><LABEL for=label>学生人数</LABEL><input type="text" name="ttedu_xueshengrenshu"class="zcinput"  value="1" size="5" />&nbsp;人</DIV>
+
+<DIV><LABEL for=label><STRONG class=red>*</STRONG>求教学科</LABEL> <INPUT id=teach_subject class=zcinput size=20 
+type=text name=ttedu_nianjikemu> <SPAN class=zsbg>例如:高三语文</SPAN> </DIV>
+<DIV><LABEL for=label>可上课时间</LABEL> <INPUT id=teach_time class=zcinput size=20 
+type=text name=ttedu_jutishijian> <SPAN class=zsbg>例如:每周六下午2点到4点</SPAN> </DIV>
+
+
+<DIV align=center><LABEL for=label>每周上课次数：</LABEL> 
+<INPUT class=zcinput value="" type=text name="ttedu_meizhoucishu" size="5"> &nbsp;次</DIV>
+<DIV align=center><LABEL for=label>每次上课时间：</LABEL>
+<INPUT class=zcinput value="" type=text name="ttedu_meicishijian" size="5">&nbsp;小时</DIV>
+<DIV align=center><LABEL for=label>每小时报酬：</LABEL> 
+<INPUT class=zcinput value="" type=text name="ttedu_meixiaoshibaochou" size="5"> &nbsp;元</DIV>
+
+
+
+<DIV class=btbg2><IMG src="Public/images/d19.gif"><STRONG>请填写您对教员的要求</STRONG></DIV>
+
+<DIV><LABEL for=label>教员性别</LABEL> <INPUT value=男 type=radio name=ttedu_techersex> 男 
+<INPUT value=女 type=radio name=ttedu_techersex> 女 <INPUT value="不限" CHECKED type=radio 
+name=ttedu_techersex> 不限 </DIV>
+<DIV><LABEL for=label>对老师的要求</LABEL> <TEXTAREA id=teacher_request class=zcinput rows=5 cols=24 name=ttedu_laoshiyaoqiu></TEXTAREA> 
+<SPAN class=zsbg>如对教员的学历，教学经验，性格等要求</SPAN> </DIV>
+<DIV><LABEL for=label>其他要求</LABEL> <TEXTAREA id=teacher_request class=zcinput rows=5 cols=24 name=ttedu_qitayaoqiu></TEXTAREA> 
+</DIV>
+
+<DIV class=ac><INPUT style="CURSOR: pointer" class=butblue value="　确  定　" type=submit name=submit1>　 
+<INPUT style="CURSOR: pointer" class=butblue value=　重　置　 type=reset name=reset1> 
+</DIV></FORM></FIELDSET> </DIV></DIV></DIV><!--右区结束，左区开始-->
+
+
+
+
+<DIV class=PrightM>
+<DIV class=qqqjj><H3>1027405904</H3></DIV>
+
+ <include file="Public:right_info" /> 
+ 
+</DIV>
+
+
+<include file="Public:foot" />

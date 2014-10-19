@@ -1,0 +1,71 @@
+<include file="Public:head" />
+
+
+<DIV class="main mainbg clearfix">
+<DIV class=LrightM>
+<DIV class=dqwz>　<IMG src="Public/images/d05.gif" width=10 
+height=11> 当前位置：<A href="__APP__/index/index">首页</A>&gt;<STRONG>请家教信息</STRONG></DIV>
+<DIV class="flbor seacbg1">
+<FORM method=post action="__APP__/index/mfsearch">
+<input type="hidden" name="types" value="6" />
+<INPUT class=seainput onclick="this.value=''" value="信息编号" size=10 type=text name="id"> 
+<INPUT class=qiujiao onClick="this.value=''" value="请输入求教学科" size=15 type=text name="teach_subject"> 
+
+<SELECT style="WIDTH: 80px" id=teach_place class=input_text 
+name="teach_place"> <OPTION selected value="">区域</OPTION> <OPTION 
+  value="">无要求</OPTION> <OPTION value=海淀>海淀</OPTION> <OPTION 
+  value=朝阳>朝阳</OPTION> <OPTION value=东城>东城</OPTION> <OPTION value=西城>西城</OPTION> 
+  <OPTION value=崇文>崇文</OPTION> <OPTION value=宣武>宣武</OPTION> <OPTION 
+  value=丰台>丰台</OPTION> <OPTION value=石景山>石景山</OPTION> <OPTION 
+  value=房山>房山</OPTION> <OPTION value=门头沟>门头沟</OPTION> <OPTION 
+  value=通州>通州</OPTION> <OPTION value=昌平>昌平</OPTION> <OPTION value=密云>密云</OPTION> 
+  <OPTION value=怀柔>怀柔</OPTION> <OPTION value=延庆>延庆</OPTION> <OPTION 
+  value=平谷>平谷</OPTION> <OPTION value=大兴>大兴</OPTION> <OPTION 
+value=顺义>顺义</OPTION></SELECT> 
+<SELECT style="WIDTH: 120px" id=select3 
+class=input_text name="gender"> <OPTION selected value="">请选择学员性别</OPTION> 
+  <OPTION value="">不限</OPTION> <OPTION value=男>男</OPTION> <OPTION 
+  value=女>女</OPTION></SELECT> 
+<SELECT style="WIDTH: 100px" id=select3 
+class=input_text name="gender2"> <OPTION selected value="">教员性别要求</OPTION> 
+  <OPTION value="">不限</OPTION> <OPTION value=男>男</OPTION> <OPTION 
+  value=女>女</OPTION></SELECT> <SPAN class=seacbg1><INPUT id=imageField3 
+src="Public/images/but.gif" type=image name=imageField3> 
+</SPAN></FORM></DIV>
+<DIV class=tit01>
+<DIV class=Ptit01T1><IMG src="Public/images/d10.gif"> 
+<H2>学员信息库 <SPAN 
+style="COLOR: red; FONT-SIZE: 12px; FONT-WEIGHT: lighter">（"√"为已经预约教员，但仍然可以网上预约。）</SPAN></H2></DIV>
+<DIV class=num>{$page}</DIV>
+<OL class=line03>
+  <LI class=lin02bg><U>订单号</U><EM>学员性别</EM><I>求教科目 </I><B>学员要求</B><EM 
+  style="WIDTH: 18%">授课区域</EM><I>发布时间</I><EM>查看详情</EM></LI>
+
+
+<volist  name="jiajiao_info" id="vo">
+  <LI><U><SPAN style="COLOR: red; FONT-WEIGHT: lighter"><eq name="vo.ttedu_shifouyuyue" value="1">√</eq></SPAN>{$vo.ttedu_id}</U>
+  <EM>&nbsp;{$vo.ttedu_sex}</EM>
+  <I>&nbsp;{$vo.ttedu_nianjikemu}</I>
+  <B>&nbsp;{$vo.ttedu_laoshiyaoqiu}</B>
+  <EM style="WIDTH: 18%">&nbsp;{$vo.ttedu_shoukediqu}</EM>
+  <I>&nbsp;{$vo.ttedu_addtime|date='Y-m-d H:i:s',###} </I>
+  <EM>&nbsp;<A title="{$vo.ttedu_nianjikemu}" href="__APP__/JiajiaoInfo/edu_infodetail/id/{$vo.ttedu_id}">查看详情</A></EM></LI>
+</volist> 
+  
+
+</OL>
+<DIV class=num>{$page}</DIV></DIV></DIV><!--中部左区结束，右区开始-->
+
+
+
+<DIV class=LleftM>
+<DIV style="MARGIN: 6px 0px 6px 2px"><A href="#"><IMG src="Public/images/jp_banner2.jpg"></A></DIV>
+
+  <include file="Public:right_info" />  
+  
+</DIV><!--主区结束，底区开始--><!--友情链接-->
+
+
+
+
+<include file="Public:foot" />

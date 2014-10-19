@@ -1,0 +1,71 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>支付设置管理</title>
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">支付设置管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+      <tr>
+		<td align="center"></td>
+      </tr>
+      <tr>
+        <td colspan="3" ><table width="100%" border="0" cellpadding="5" cellspacing="0">
+		   <tr bgcolor="#e7f3e7">
+			  <td width="14%" class="td">支付方式</td>
+			  <td width="16%" class="td">商户账号</td>
+			  <td width="15%" height="25" class="td">MD5密匙</td>
+			  <td width="18%" height="25" class="td">手续费率</td>
+			  <td width="10%" class="td">排序</td>
+			  <td width="13%" class="td">启用状态</td>
+			  <td width="14%" class="td">操作</td>
+		  </tr>
+		  
+		  
+		  <volist name="set_pay_info" id="vo">
+            <tr>
+              <td class="td">{$vo.ttedu_payname}</td>
+              <td class="td">{$vo.ttedu_zhanghao}</td>
+			  <td class="td">{$vo.ttedu_anquanyangzhengma}</td>
+			  <td class="td">{$vo.ttedu_shouxufei}%</td>
+			  <td class="td">{$vo.ttedu_paixu}</td>
+			  <td class="td">
+			  <eq name="vo.ttedu_shifouqiyong" value="1">未启用</eq>
+			  <eq name="vo.ttedu_shifouqiyong" value="0">启用</eq>
+			  </td>
+              <td class="td">
+                <input type="button" name="Submit3" value="详情"   class="btn"
+					onclick="window.location.href='__APP__/admin/SetAdmin/update_set_pay/ttedu_id/'+{$vo.ttedu_id} " />
+               </td>
+            </tr>
+			</volist>
+			
+			
+          </table>
+            </td>
+      </tr>
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor=''" bgcolor="">
+        <td align="center" height="30"> {$page}</td>
+      </tr>  
+    </table></td>
+  </tr>
+</table>
+
+</body>
+</html>

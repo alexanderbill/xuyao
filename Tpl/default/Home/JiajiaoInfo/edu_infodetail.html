@@ -1,0 +1,90 @@
+<include file="Public:head2" />
+
+
+<DIV class="main  mainbg clearfix">
+<DIV class=PleftM>
+<DIV class=rcur>
+<P><STRONG>当前位置：</STRONG><A href="http://www.eduease.com/">首页</A> &gt; {$jiajiao_info.ttedu_id} 
+号学员信息</P></DIV>
+<TABLE class=mberTab cellSpacing=1 cellPadding=1>
+  <TBODY>
+  <TR>
+    <TH colSpan=4>{$jiajiao_info.ttedu_id} 号学员基本信息</TH></TR>
+  <TR>
+    <TD width="18%" align=right><STRONG>订单号：</STRONG></TD>
+    <TD class=green width="26%">{$jiajiao_info.ttedu_id}</TD>
+    <TD width="18%" align=right><STRONG>联系人：</STRONG></TD>
+    <TD class=blue width="35%">{$jiajiao_info.ttedu_chengfu}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>学员性别：</STRONG></TD>
+    <TD><SPAN class=blue>{$jiajiao_info.ttedu_sex} </SPAN></TD>
+    <TD width="18%" align=right><STRONG>学员年龄：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_old}&nbsp;岁</TD></TR>
+  <TR>
+    <TD align=right><STRONG>学员人数：</STRONG></TD>
+    <TD><SPAN class=blue>{$jiajiao_info.ttedu_xueshengrenshu} </SPAN>&nbsp;人</TD>
+    <TD width="18%" align=right><STRONG>求教科目：</STRONG></TD>
+    <TD><SPAN class=yel>{$jiajiao_info.ttedu_nianjikemu}</SPAN></TD></TR>
+  <TR>
+    <TD align=right><STRONG>授课区域：</STRONG></TD>
+    <TD class=yel>{$jiajiao_info.ttedu_shoukediqu}</TD>
+    <TD width="18%" align=right><STRONG>详细住址：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_address}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>乘车说明：</STRONG></TD>
+    <TD class=yel colspan="3">{$jiajiao_info.ttedu_nalugongjiao}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>学员要求：</STRONG></TD>
+    <TD colspan="3">{$jiajiao_info.ttedu_laoshiyaoqiu} </TD></TR>
+  <TR>
+    <TD align=right><STRONG>其他要求：</STRONG></TD>
+    <TD colspan="3">{$jiajiao_info.ttedu_qitayaoqiu}</TD></TR>
+   <TR>
+    <TD align=right><STRONG>每周次数：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_meizhoucishu}&nbsp;次</TD>
+	<TD align=right><STRONG>每次时间：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_meicishijian}&nbsp;小时</TD></TR>
+  <TR>
+    <TD align=right><STRONG>每小时报酬：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_meixiaoshibaochou}&nbsp;元</TD></TR>
+  <TR>
+    <TD align=right><STRONG>可授课时间：</STRONG></TD>
+    <TD>{$jiajiao_info.ttedu_jutishijian}</TD>
+    <TD width="18%" align=right><STRONG>发布时间：</STRONG></TD>
+    <TD><SPAN class=yel>{$jiajiao_info.ttedu_addtime|date='Y-m-d H:i:s',###}</SPAN></TD></TR></TBODY></TABLE>
+
+<DIV class=mberlx>请注意，若你对此订单感兴趣，请立即申请！
+<A class=yyjy href="#" onclick="document.getElementById('tijiao').style.display='block';">立即申请</A>
+<div style="margin-top:8px; display:none;" id="tijiao">
+<form action="__APP__/TeachToStu/teach_to_stu" method="post">
+<input type="hidden" name="ttedu_jiajiaoid" value="{$jiajiao_info.ttedu_id}" />
+留言备注：<br />
+<textarea name="ttedu_beizhu" rows="4" cols="50"></textarea><br />
+<input type="submit" value="确认提交" />
+</form>
+</div>
+</DIV>
+<DIV style="MARGIN: 6px 0px 6px 4px"><A 
+href="http://www.eduease.com/jingpai/jpjj_ys.php"><IMG 
+src="Public/images/jp_banner1.jpg"></A></DIV>
+<DIV class=tit01>
+<DIV class=tit01TB1>
+<H2>同类学员信息</H2><IMG src="Public/images/d10.gif"> </DIV>
+<OL class=line02>
+  <LI class=lin02bg><EM>姓名</EM><U>授课区域</U><U>求教科目</U><B>要求</B><EM>时间</EM></LI>
+  
+<volist  name="jiajiao_more" id="vo">
+  <LI><EM><A href="__APP__/JiajiaoInfo/edu_infodetail/id/{$vo.ttedu_id}">{$vo.ttedu_chengfu}</A></EM><U> {$vo.ttedu_shoukediqu} 
+  </U><U>{$vo.ttedu_nianjikemu}</U><B>{$vo.ttedu_laoshiyaoqiu}</B><EM>{$vo.ttedu_addtime|date='Y-m-d H:i:s',###}</EM></LI>
+</volist>  
+  
+</OL></DIV></DIV><!--中部左区结束，右区开始-->
+
+<DIV class=PrightM>
+<DIV style="MARGIN: 6px 0px 6px 2px"><A href="#"><IMG src="Public/images/jp_banner2.jpg"></A></DIV>
+
+<include file="Public:right_info" />
+
+</DIV>
+
+<include file="Public:foot" />

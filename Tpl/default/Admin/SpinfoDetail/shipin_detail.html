@@ -1,0 +1,86 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="images/style.css">
+<title>修改课程</title>
+<script type="text/javascript" charset="utf-8" src="Public/admin/edit/kindeditor-min.js"></script>
+<script type="text/javascript">
+KE.show({
+	id : 'content1',
+	cssPath : './../index.css'
+});
+</script>
+
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<form  name="add" method="post" action="__URL__/update" enctype="multipart/form-data">
+<input type="hidden" value="{$spinfo_detail.ttedu_id}" name="ttedu_id" />
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">添加视频</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">视频标题</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_sptitle" type="text" value="{$spinfo_detail.ttedu_sptitle}" size="60"  /></td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">视频分类</td>
+        <td width="84%"  class="td">
+          <select name="ttedu_spbtype_id">
+		  <volist name="spbtype_info" id="vo">
+		  <option value="{$vo.ttedu_id}" <eq name='vo.ttedu_id' value='$spinfo_detail.ttedu_spbtype_id'>selected</eq> >{$vo.ttedu_spbtype_name}&nbsp;</option>
+		  </volist>
+		  </select></td> 
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">总集数</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_spjishu" type="text" value="{$spinfo_detail.ttedu_spjishu}" size="5"  /></td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">详细集数</td>
+        <td width="84%"  class="td">
+		  <input type="button" name="Submit3" value="添加"  class="btn"
+			  		onclick="window.location.href='__APP__/Admin/SpinfoDetail/add_jishu/ttedu_spinfo_id/'+{$spinfo_detail.ttedu_id} " />
+          <volist name="shiping_jishu" id="vo">
+		  <span style="margin-left:10px;">
+		  	[<a href="__APP__/Admin/SpinfoDetail/xiugai_jishu/ttedu_id/{$vo.ttedu_id}" style="color:#0000ff;">{$vo.ttedu_jishu}</a>]</span>
+		  </volist>
+		 </td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">缩略图</td>
+        <td width="84%"  class="td"><input name="image" id="image" type="file" class="file huge" />&nbsp;上传允许文件类型：gif png jpg 图像文件</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">排序ID</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_sppaixu" type="text" value="{$spinfo_detail.ttedu_sppaixu}" size="5"  />&nbsp;数字越小越靠前</td>
+      </tr>
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8">
+        <td height="25" class="td">视频描述</td>
+        <td class="td"> <textarea id="content1" name="ttedu_spcontent" style="width:700px;height:400px;visibility:hidden;">{$spinfo_detail.ttedu_spcontent}</textarea></td>
+      </tr>
+    <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#FFFFFF'" bgcolor="#FFFFFF">
+        <td height="25" class="td">&nbsp;</td>
+        <td class="td"><input type="submit" name="button" id="button" value="确认提交"  class="btn"/></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+  
+	<tr>
+	  <td><span class="STYLE7">星级会员特权：</span><br>
+1、家长查找老师时您将排在“一般会员”前面。<br>
+2、在查找老师结果的页面中有星级会员标志。<br>
+3、在老师资料中有星级会员标志。
+<br>
+4、<span class="hougse">您可以直接取得家长电话(无限次数)！   注：此功能随时会取消，且不退款</span><br>
+5、<span class="hougse">在您的资料中直接显示您的电话！　　注：此功能随时会取消，且不退款</span></td>
+	</tr>
+	<tr><td><br>以下是部分星级会员：</td></tr>
+	<tr><td><table width="80%" border="0" cellpadding="0" cellspacing="5">
+		<volist name="teach_info" id="vo" mod="5">
+		<eq name="mod" value="1"><tr></eq>
+		<td height="30" align="left">
+			<a href="__APP__/TeachInfo/tehdetail/id/{$vo.ttedu_id}" style="color:#FF0000">{$vo.ttedu_chenfu}</a>
+			[<span style="color:#0000FF">{$vo.ttedu_id}</span>]
+		</td>
+		<eq name="mod" value="5"></tr></eq>
+		</volist>
+		</table>
+     <td><tr>
+	<form action="__URL__/up_gjhy" method="post">
+		<input type="hidden" name="ttedu_shengyujinge" value="{$member.ttedu_shengyujinge}">
+	<tr>
+	  <td>
+		<br>当前余额：<font color=red>{$member.ttedu_shengyujinge}&nbsp;元</font>　<a href="__URL__/jecz"><font color="red">我要充值</font></a><br>
+		申请时间：<select name="ttedu_shifoushengji_time" id="monthcount">
+			<option value="1">一个月10元</option>
+			<option value="2">两个月20元</option>
+			<option value="3">三个月30元</option>
+			<option value="6">半　年60元</option>
+			<option value="12">一　年120元</option>
+		  </select>
+          <input type="hidden" value="{$member.ttedu_shengyujinge}" name="yuge">
+		<br>
+		<br>
+		相关问答：<br>
+		<span class="STYLE2">问：一个月会员有多少天？</span><br>
+		答：比如这个月的18号开始申请就到下个月的18号结束。<br>
+		<span class="STYLE2">问：会员能不能单独申请一个月？</span><br>
+		答：可以。<br>
+		<span class="STYLE2">问：申请会员能不能用手机付费？</span><br>
+		答：不可以。</td>
+	</tr>
+	<tr>
+	  <td height="45">第一、会员<span class="hougse">不得把家长联系方式告诉任何人</span>，否则取消会员权利，并追究责任。<br>
+		第二、申请会员不保证一定能找到家教工作。<br>
+		第三、我站的家教信息不保证真实有效，我站不承担任何责任。<br>
+		第四、一个家教最多只能五位老师取得联系电话。<br>
+		第五、我站随时有可能会取消会员免费取得家长的权限，且不退回会员费。<br>
+					<input name="queren" type="checkbox" id="queren" value="1">
+		我已经认真阅读以上全部内容，并能理解且接受以上全部内容<br>
+		<input type="submit" name="Submit" value="　立即申请　" style="width:120px;height:40px" onClick="return checkxieyi();">		  </td>
+	</tr>
+	</form>
+  </table>
+
+		  
+</body></html>

@@ -1,0 +1,68 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>学生会员管理</title>
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+ 
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">广告管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+       
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor=''" bgcolor="">
+        <td align="center" height="30"  colspan="3">
+			<input type="button" name="Submit3" value="添加广告"  class="btn" onclick="window.location.href='__APP__/Admin/index/add_ad'"/></td>
+      </tr>  
+      <tr>
+        <td colspan="3" ><table width="100%" border="0" cellpadding="5" cellspacing="0">
+            <tr bgcolor="#e7f3e7">
+              <td width="9%" height="25" class="td">ID</td>
+              <td width="18%" class="td">广告名称</td>
+              <td width="20%" class="td">链接地址</td>
+			  <td width="25%" class="td">添加时间</td>
+			  <td width="15%" class="td">显示状态</td>
+			  <td width="13%" class="td">操作</td>
+            </tr>
+			
+			<volist name="ad" id="vo">
+			<tr>
+              <td class="td">{$vo.ttedu_id}</td>
+              <td height="25" class="td">{$vo.ttedu_adtitle}</td>
+              <td class="td">{$vo.ttedu_adaddress}</td>
+              <td class="td">{$vo.ttedu_adddate|date='Y-m-d H:i:s',###}</td>
+			  <td class="td"><eq name="vo.ttedu_shifouxianshi" value="0">显示</eq><eq name="vo.ttedu_shifouxianshi" value="1">不显示</eq></td>
+              <td class="td">
+                <input type="button" name="Submit3" value="查看"  class="btn"
+					onclick="window.location.href='__APP__/Admin/index/detail_ad/ttedu_id/'+{$vo.ttedu_id}"/>
+				<input type="button" name="Submit" value="删除" class="btn" 
+					onclick="javascript:if(confirm('确定删除？删除后不可恢复!')){
+						window.location.href='__APP__/Admin/index/delete_ad/ttedu_id/'+{$vo.ttedu_id} ;}else{history.go(0);}" />
+               </td>
+            </tr>
+			</volist>
+          </table>
+            </td>
+      </tr>
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor=''" bgcolor="">
+        <td width="199" height="30"></td>
+      </tr>  
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

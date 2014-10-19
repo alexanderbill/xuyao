@@ -1,0 +1,94 @@
+<include file="Public:head2" />
+
+<DIV class=zxtop>
+<DIV class=PleftM>
+<DIV class=rcur>
+<P><STRONG>当前位置：</STRONG><A href="http://www.eduease.com/">首页</A> &gt; 查看 学生会员信息 </P></DIV>
+<TABLE class=mberTab cellSpacing=1 cellPadding=1>
+  <TBODY>
+  <TR>
+    <TH colSpan=4>学生会员基本信息 </TH></TR>
+  <TR>
+    <TD align=right><STRONG>教员编号：</STRONG></TD>
+    <TD class=green>{$huiyuan_info.ttedu_id}</TD>
+    <TD align=right><STRONG>用户名：</STRONG></TD>
+    <TD class=blue>{$huiyuan_info.ttedu_username}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>性别：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_sex}</TD>
+    <TD align=right><STRONG>年龄：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_old}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>出生年月：</STRONG></TD>
+    <TD class=yel>{$huiyuan_info.ttedu_birth} </TD>
+ </TR>
+  <TR>
+    <TD align=right><STRONG>手机：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_shouji} </TD>
+    <TD align=right><STRONG>座机：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_zuoji}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>QQ号：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_qq}</TD>
+    <TD align=right><STRONG>Email：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_email}</TD></TR>
+  <TR>
+    <TD align=right><STRONG>注册时间：</STRONG></TD>
+    <TD class=yel>{$huiyuan_info.ttedu_zhucedate|date='Y-m-d H:i:s',###}</TD>
+    <TD align=right><STRONG>最近登陆时间：</STRONG></TD>
+    <TD>{$huiyuan_info.ttedu_logindate|date='Y-m-d H:i:s',###}</TD></TR>
+</TBODY></TABLE>
+
+
+
+<DIV class=tit01>
+<DIV class=tit01TB1>
+<H2>更多学生会员信息</H2><IMG src="Public/images/d10.gif"> </DIV>
+
+
+<table cellpadding="0" cellspacing="5" border="0">
+<tr><td width="91" height="30">编号</td>
+<td width="155">用户名</td>
+<td width="126">性别</td>
+<td width="147">年龄</td>
+<td width="284">注册时间</td>
+</tr>
+<volist  name="huiyuan_more" id="vo"> 
+<tr>
+<td height="30">{$vo.ttedu_id}</td>
+<td><A href="__URL__/tehdetail/id/{$vo.ttedu_id}">{$vo.ttedu_username}</A></td>
+<td>{$vo.ttedu_sex}</td><td>{$vo.ttedu_old}</td>
+<td>{$vo.ttedu_zhucedate|date='Y-m-d H:i:s',###}</td></tr>
+</volist> 
+</table>
+
+</DIV></DIV>
+<DIV class=tright>
+<DIV class=tit01>
+<DIV class=zxtit01T2>
+<H2><IMG src="Public/images/d03.gif">本站搜索</H2></DIV>
+<DIV>
+<DIV class=s01>
+<FORM method=post action="__APP__/index/mfsearch">
+<input type="hidden" name="types" value="5" />
+<INPUT class=seainpu 
+onclick="this.value=''" value="信息标题" size=10 type=text name="titles"> 
+<SELECT style="WIDTH: 95px" id=select3 class=input_text name="subject"> 
+<OPTION selected 
+  value="">所有文章</OPTION> <OPTION value=15>新闻动态</OPTION> <OPTION 
+  value=17>助教公告</OPTION> <OPTION value=18>小学教育</OPTION> <OPTION 
+  value=19>初中教育</OPTION> <OPTION value=20>高中教育</OPTION> <OPTION 
+  value=21>中考咨询</OPTION> <OPTION value=22>高考咨询</OPTION> <OPTION 
+  value=23>常见问题</OPTION> <OPTION value=24>心灵沟通</OPTION> <OPTION 
+  value=25>好书推荐</OPTION> <OPTION value=26>家教之路</OPTION> <OPTION 
+  value=27>其他咨询</OPTION> </SELECT> <SPAN 
+class=seacbg1><INPUT id=imageField src="Public/images/but.gif" type=image 
+name=imageField> </SPAN></FORM>
+</DIV></DIV></DIV>
+
+
+<include file="Public:right_info" />
+
+</DIV>
+
+<include file="Public:foot" />

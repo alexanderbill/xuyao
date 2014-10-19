@@ -1,0 +1,36 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>学生会员管理</title>
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+ 
+</head>
+<body>
+<form action="__APP__/Admin/index/insert_ad" method="post" enctype="multipart/form-data">
+<table width="100%" border="0" cellspacing="5" cellpadding="0">
+<tr><td height="40" align="center" style="font-size:14px; border-bottom:1px solid #66CC99" colspan="2">添加广告</td>
+</tr>
+<tr><td width="27%" height="30" align="right">广告名称：</td><td width="73%"><input type="text" name="ttedu_adtitle"  size="20" /></td></tr>
+<tr><td height="30" align="right">链接地址：</td><td><input type="text" name="ttedu_adaddress"  size="20" /></td></tr>
+<tr><td height="30" align="right">上传图片：</td><td><input name="image" id="image" type="file" class="file huge" />&nbsp;上传允许文件类型：gif png jpg 图像文件</td></tr>
+<tr><td height="30" align="right">广告位置：</td><td><input type="text" name="ttedu_weizhi"  size="20" /></td></tr>
+<tr><td height="30" align="right">图片宽度：</td><td><input type="text" name="ttedu_adheight"  size="5" /></td></tr>
+<tr><td height="30" align="right">图片高度：</td><td><input type="text" name="ttedu_adwidth"  size="5" /></td></tr>
+<tr><td height="30" align="right">是否显示：</td><td><input type="radio" name="ttedu_shifouxianshi" value="1"/>不显示&nbsp;&nbsp;
+			<input type="radio" name="ttedu_shifouxianshi" value="0" checked="checked"/>显示</td></tr>
+<tr><td height="30" align="right"></td><td><input type="submit" value="确定添加" /></td></tr>
+</table>
+</form>
+</body>
+</html>

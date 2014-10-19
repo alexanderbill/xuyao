@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+<table width="750" border="0" cellpadding="0" cellspacing="5" class="tablewhite">
+        <tr>
+          <td height="30" align="left" valign="bottom"><strong class="font14"><font color="green">身份认证</font></strong></td>
+        </tr>
+        <tr><td height="30" align="left"><span class="hougse">本服务数据依托“全国公民身份信息系统”</span></td></tr>
+		<tr><td><table width="80%" border="0" cellpadding="0" cellspacing="5">
+		<volist name="teach_info" id="vo" mod="5">
+		<eq name="mod" value="1"><tr></eq>
+		<td height="30" align="left">
+			<a href="__APP__/TeachInfo/tehdetail/id/{$vo.ttedu_id}" style="color:#FF0000">{$vo.ttedu_chenfu}</a>
+			[<span style="color:#0000FF">{$vo.ttedu_id}</span>]
+		</td>
+		<eq name="mod" value="5"></tr></eq>
+		</volist>
+		</table>
+        <td><tr>
+          <td height="30" align="left"><br>
+            第一步：身份证审核费用为5元，你当前余额为{$member.ttedu_shengyujinge}&nbsp;元
+			<lt name="member.ttedu_shengyujinge" value="5">，已不足5元，请先<a href="__URL__/jecz">充值</a></lt>。</td>
+        </tr>
+        <tr>
+          <td height="30" align="left"> <br>
+            第二步：提交身份证资料 <br>
+		
+		<form name="form1" method="post" action="__URL__/update_shenfenzheng">
+			<input type="hidden" name="ttedu_shengyujinge" value="{$member.ttedu_shengyujinge}">
+            您的姓名：&nbsp;&nbsp;&nbsp;<input name="username" type="text" id="username" disabled="disabled" value="{$member.ttedu_chenfu}"><br>
+            身份证号码：<input name="ttedu_shenfenzheng" type="text" id="usercode" value=""><br>
+                <input type="submit" name="Submit" value="　提交验证资料　">
+				
+		</form>
+                <br>
+                <br>                
+                <span class="hougse">【特别注意】</span>如果姓名或者身份证号码出错，也要收费5元，请认真确认！</td>
+        </tr>
+        
+      </table>
+
+		  
+</body></html>

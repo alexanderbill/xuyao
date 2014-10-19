@@ -1,0 +1,1 @@
+document.write('<a href="http://bbs.eduee.com " target="_blank">助教社区</a>');

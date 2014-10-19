@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>新闻管理</title>
+<script language="javascript"> 
+<!-- 
+function CheckAll(){ 
+ for (var i=0;i<eval(form1.elements.length);i++){ 
+  var e=form1.elements[i]; 
+  if (e.name!="allbox") e.checked=form1.allbox.checked; 
+ } 
+} 
+--> 
+</script> 
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#ffffff">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">老师详细信息</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="1" align="center" cellpadding="8" cellspacing="0">
+      <tr>
+       <td align="center">
+	   	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+        <form id="form1" name="form1" method="post" action="__APP__/Admin/TeachInfo/detail_member_teh">
+			<tr><td>老师编号：<input type="text" name="ttedu_id" /></td>
+				<td>身份证/执照：<input type="text" name="ttedu_shenfenzheng" /></td>
+				<td>老师姓名：<input type="text" name="ttedu_chenfu" /></td></tr>
+			<tr><td>QQ号码：&nbsp;&nbsp;<input type="text" name="ttedu_qq" /></td>
+				<td>电话号码：&nbsp;&nbsp;&nbsp;<input type="text" name="ttedu_shouxuandianhua" /></td>
+				<td>任教学校：<input type="text" name="ttedu_renjiaoxuexiao" /></td>
+				<td><input type="submit" value="查找老师"  class="btn"/></td></tr>
+		</form></table>
+		 </td>
+      </tr>
+	  <tr>
+       <td align="center"><table width="100%" border="0" align="center" cellpadding="2" cellspacing="1">
+			<tr>
+			  <td width="19%" rowspan="6" align="center">联系方式：</td>
+			  <td width="81%" align="left">用户名：{$teach_info.ttedu_username}
+			  		<span style="color:#0000ff">[{$teach_info.ttedu_id}]</span></td>
+			</tr>
+			<tr>
+			  <td align="left">真实姓名：{$teach_info.ttedu_chenfu}</td>
+			</tr>
+			<tr>
+			  <td align="left">首选电话：{$teach_info.ttedu_shouxuandianhua}</td>
+			</tr>
+			<tr>
+			  <td align="left">备选电话：{$teach_info.ttedu_beiyongdianhua}</td>
+			</tr>
+			<tr>
+			  <td align="left">双号电话：{$teach_info.ttedu_shuanghaodianhua}</td>
+			</tr>
+			<!--
+			<tr>
+			  <td align="left">QQ号码：{$teach_info.ttedu_username}</td>
+			</tr>
+			-->
+		  </table></td>
+      </tr>
+	 
+	  
+    </table></td>
+  </tr>
+</table>
+<br /><br />
+<table width="95%" border="1" align="center" cellpadding="0" cellspacing="1" bgcolor="#ffffff">
+   <tr>
+   <td width="9%" align="center" height="40">学员评论：</td>
+   <td width="91%" align="center">
+	<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+		<volist name="teach_pingun" id="vo">
+		<tr>
+			<td width="8%" height="20">评论人：</td>
+			<td width="22%">
+			  <volist name="vo['person']" id="person">
+			  <a href="__APP__/Admin/HuiyuanInfo/update_member_stu/ttedu_id/{$person.id}" style="color:#0000ff">{$person.name}</a>
+			  </volist>
+			</td>
+			<td width="9%">评论级别：</td>
+			<td width="22%">
+			<compare name="vo.ttedu_jibie" value="1" type="eq">很差</compare>
+			<compare name="vo.ttedu_jibie" value="2" type="eq">差</compare>
+			<compare name="vo.ttedu_jibie" value="3" type="eq">一般</compare>
+			<compare name="vo.ttedu_jibie" value="4" type="eq">好</compare>
+			<compare name="vo.ttedu_jibie" value="5" type="eq">很好</compare>
+			</td>
+			<td width="8%">评论时间：</td>
+			<td width="31%">{$vo.ttedu_addtime|date='Y-m-d H:i:s',###}</td>
+		</tr>
+		<tr><td height="30">评论内容：</td><td colspan="5" align="left" style="border-top:1px solid #dddddd;">{$vo.ttedu_content}</td></tr>
+		</volist>
+		<tr><td colspan="6">{$page}</td></tr>
+	</table>
+	</td></tr>
+</table>
+</body>
+</html>

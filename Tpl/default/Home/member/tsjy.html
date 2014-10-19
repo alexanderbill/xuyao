@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+<table width="683" height="220" border="0" cellpadding="0" cellspacing="0">
+    <form action="__URL__/add_liuyan" method="post">
+		<input type="hidden" name="ttedu_username" value="{$member.ttedu_username}">
+		<input type="hidden" name="ttedu_tel" value="{$member.ttedu_shouxuandianhua}">
+		<input type="hidden" name="ttedu_email" value="{$member.ttedu_email}">
+      <tr>
+        <td height="72" colspan="2"><p style="line-height:25px;"> 　 　这里是建议投诉专区，您如果有什么好的建议、或者在预约家教中遇到什么问题、以及对我们工作人员服务是否满意、希望易教在哪些方面有所改进，请在这里输入！易教网感谢您的留言，我们将努力做得更好！</p></td>
+      </tr>
+	  <tr>
+        <td width="147" height="48" align="right" valign="middle">标题：</td>
+        <td width="536" align="left" valign="middle"><input type="text" name="ttedu_title" size="45"></td>
+      </tr>
+      <tr>
+        <td width="147" height="108" align="right" valign="middle">您的建议或投诉：</td>
+        <td width="536" align="left" valign="middle">
+          <textarea name="ttedu_content" id="contenthide" cols="45" rows="7"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td height="30" align="right" valign="middle">&nbsp;</td>
+        <td height="30">&nbsp;&nbsp;<label><input name="button" type="submit" class="butblue" id="button" value=" 提 交 " />
+        </label></td>
+      </tr>
+      </form>
+    </table>
+
+		  
+</body></html>

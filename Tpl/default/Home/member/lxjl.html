@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+<table width="750" border="0" cellspacing="0" cellpadding="0">
+<tr><td align="center" height="40" style="font-size:14px; border-bottom:1px solid #66CC99">与管理员的联系记录</td></tr>
+
+
+<tr>
+  <td height="25" colspan="2"><table width="95%" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px solid #66CC99">
+  <tr>
+  	<td width="10%" height="30">ID</td>
+	<td width="13%">联系方式</td>
+	<td width="48%">联系内容</td>
+	<td width="29%">联系时间</td>
+  </tr>
+<volist name="lianxi_jilu" id="vo">
+    <tr>
+  	<td height="30">{$vo.ttedu_id}</td>
+	<td>{$vo.ttedu_type}</td>
+	<td>{$vo.ttedu_content}</td>
+	<td>{$vo.ttedu_adddate|date='Y-m-d H:i:s',###}</td>
+  </tr>
+</volist>
+  </table></td>
+</tr>
+<tr><td height="30" align="center">{$page}</td></tr>
+</table>
+
+		  
+</body></html>

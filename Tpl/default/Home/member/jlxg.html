@@ -1,0 +1,171 @@
+﻿<html>
+<head>
+<title>会员中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<style type="text/css">
+body,table,div{
+font-size:12px;
+}
+</style>
+
+</head>
+<body>
+
+<form  name="add" method="post" action="__URL__/update_member_teh" >
+<input type="hidden" name="ttedu_id" value="{$teach_info.ttedu_id}" />
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+  <tr>
+    <td height="30" align="center" style="color:#222222">您所填信息越详细就越有利于检索，也就越容易获得学员的预约</td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8">
+        <td height="28" class="td" align="center" colspan="4"  style="border-bottom:1px solid #666666;">
+			<span style="font-size:14px"><strong>基本信息</strong></span></td>
+      </tr>
+      <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="15%" class="td" align="right">用户名：</td>
+        <td width="30%"  class="td">{$teach_info.ttedu_username}（{$teach_info.ttedu_id}）</td>
+		<td height="28" width="15%" class="td" align="right">真实姓名:</td>
+        <td width="40%"  class="td">{$teach_info.ttedu_chenfu}</td>
+      </tr>
+	  
+	 <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">性别：</td>
+        <td class="td">
+			<input name="ttedu_sex" value="男" type="radio" <eq name="teach_info.ttedu_sex" value="男">checked</eq>/>&nbsp;男
+			<input name="ttedu_sex" value="女" type="radio" <eq name="teach_info.ttedu_sex" value="女">checked</eq>/>&nbsp;女</td>
+		<td class="td" align="right">年龄:</td>
+        <td class="td"><input name="ttedu_old" type="text" value="{$teach_info.ttedu_old}" size="5"  />&nbsp;岁</td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">出生年月:</td>
+        <td class="td"><input name="ttedu_birth" type="text" value="{$teach_info.ttedu_birth}" size="25"  /></td>
+        <td height="28" class="td" align="right">籍贯:</td>
+        <td class="td"><input name="ttedu_jiguan" type="text" value="{$teach_info.ttedu_jiguan}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">身份证/护照:</td>
+        <td class="td"><input name="ttedu_shenfenzheng" type="text" value="{$teach_info.ttedu_shenfenzheng}" size="25" disabled="disabled"/></td>
+		<td class="td" align="right">邮箱号码:</td>
+        <td class="td"><input name="ttedu_email" type="text" value="{$teach_info.ttedu_email}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">首选电话：</td>
+        <td class="td"><input name="ttedu_shouxuandianhua" type="text" value="{$teach_info.ttedu_shouxuandianhua}" size="25"  /></td>
+		<td class="td" align="right">备用电话:</td>
+        <td class="td"><input name="ttedu_beiyongdianhua" type="text" value="{$teach_info.ttedu_beiyongdianhua}" size="25"  /></td>
+      </tr>
+	  <!--
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">QQ号码：</td>
+        <td class="td"><input name="ttedu_qq" type="text" value="{$teach_info.ttedu_qq}" size="15"  /></td>
+		<td class="td" align="right">邮箱号码:</td>
+        <td class="td"><input name="ttedu_email" type="text" value="{$teach_info.ttedu_email}" size="15"  /></td>
+      </tr>
+	  -->
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">家庭住址：</td>
+        <td class="td"><input name="ttedu_address" type="text" value="{$teach_info.ttedu_address}" size="25"  /></td>
+		<td class="td" align="right">通信地址:</td>
+        <td class="td"><input name="ttedu_tongxundizhi" type="text" value="{$teach_info.ttedu_tongxundizhi}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">毕业/就读高校：</td>
+        <td class="td"><input name="ttedu_biyexuexiao" type="text" value="{$teach_info.ttedu_biyexuexiao}" size="25"  /></td>
+		<td class="td" align="right">专业:</td>
+        <td class="td"><input name="ttedu_zhuanye" type="text" value="{$teach_info.ttedu_zhuanye}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">目前学历：</td>
+        <td class="td"><input name="ttedu_mqxueli" type="text" value="{$teach_info.ttedu_mqxueli}" size="25"  /></td>
+		<td class="td" align="right">目前身份:</td>
+        <td class="td"><input name="ttedu_mqshengfei" type="text" value="{$teach_info.ttedu_mqshengfei}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">注册时间：</td>
+        <td class="td">{$teach_info.ttedu_adddate|date='Y-m-d H:i:s',###}</td>
+		<td class="td" align="right">最后登录时间:</td>
+        <td class="td">{$teach_info.ttedu_logindate|date='Y-m-d H:i:s',###}</td>
+      </tr>
+	   <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">会员级别：</td>
+        <td class="td">
+			<eq name="teach_info.ttedu_shifoushengji" value="0">普通会员[<a href="__URL__/gjhy" style=" color:#0000ff">立即升级</a>]</eq>
+			<gt name="teach_info.ttedu_shifoushengji" value="0"><img src="Public/member/images/d15.gif"></gt>
+			<gt name="teach_info.ttedu_shifoushengji" value="1"><img src="Public/member/images/d15.gif"></gt>
+			<gt name="teach_info.ttedu_shifoushengji" value="2"><img src="Public/member/images/d15.gif"></gt>
+			<gt name="teach_info.ttedu_shifoushengji" value="3"><img src="Public/member/images/d15.gif"></gt>
+			<gt name="teach_info.ttedu_shifoushengji" value="4"><img src="Public/member/images/d15.gif"></gt></td>
+		<td height="28" class="td" align="right">是否通过审核：</td>
+        <td class="td"><eq name="teach_info.ttedu_shengheishifoutongguo" value="1">已通过<else/>未通过</eq></td>
+      </tr>
+	 
+	 <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8">
+        <td height="28" class="td" align="center" colspan="4"  style="border-bottom:1px solid #666666;">
+			<span style="font-size:14px"><strong>专业教师信息（专业教师填写）</strong></span></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">任职学校：</td>
+        <td class="td"><input name="ttedu_renjiaoxuexiao" type="text" value="{$teach_info.ttedu_renjiaoxuexiao}" size="25"  /></td>
+		<td class="td" align="right">任职学校类型:</td>
+        <td class="td"><input name="ttedu_xuexiaoleibie" type="text" value="{$teach_info.ttedu_xuexiaoleibie}" size="25"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">任教学科：</td>
+        <td class="td"><input name="ttedu_zuinanshoukemu" type="text" value="{$teach_info.ttedu_zuinanshoukemu}" size="25"  /></td>
+		<!--
+		<td class="td" align="right">教龄:</td>
+        <td class="td"><input name="" type="text" value="" size="15"  /></td>
+		-->
+      </tr>
+	 <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8">
+        <td height="28" class="td" align="center" colspan="4"  style="border-bottom:1px solid #666666;">
+			<span style="font-size:14px"><strong>家教信息</strong></span></td>
+      </tr>
+	  
+	 <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">辅导对象：</td>
+        <td class="td">
+			<input name="ttedu_renjiaoduixiang" value="男" type="radio" <eq name="teach_info.ttedu_renjiaoduixiang" value="男">checked</eq>/>&nbsp;男&nbsp;
+			<input name="ttedu_renjiaoduixiang" value="女" type="radio" <eq name="teach_info.ttedu_renjiaoduixiang" value="女">checked</eq>/>&nbsp;女&nbsp;
+			<input name="ttedu_renjiaoduixiang" value="不限" type="radio" <eq name="teach_info.ttedu_renjiaoduixiang" value="不限">checked</eq> />&nbsp;不限</td>
+		<td class="td" align="right">辅导方式:</td>
+        <td class="td">
+			<input name="ttedu_fudaofangshi" value="本人上门" type="radio" <eq name="teach_info.ttedu_fudaofangshi" value="本人上门">checked</eq>/>&nbsp;本人上门&nbsp;
+			<input name="ttedu_fudaofangshi" value="学生上门" type="radio" <eq name="teach_info.ttedu_fudaofangshi" value="学生上门">checked</eq>/>&nbsp;学生上门&nbsp;
+			<input name="ttedu_fudaofangshi" value="网上辅导" type="radio" <eq name="teach_info.ttedu_fudaofangshi" value="网上辅导">checked</eq>/>&nbsp;网上辅导&nbsp;
+			<input name="ttedu_fudaofangshi" value="不限" type="radio" <eq name="teach_info.ttedu_fudaofangshi" value="不限">checked</eq> />&nbsp;不限</td>
+      </tr> 
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">薪水要求：</td>
+        <td class="td"><input name="ttedu_xingshuiyaoqiu" type="text" value="{$teach_info.ttedu_xingshuiyaoqiu}" size="5"  /></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">可辅导科目：</td>
+        <td class="td"> <textarea name="ttedu_renjiaoxueke" cols="23" rows="3" >{$teach_info.ttedu_renjiaoxueke}</textarea></td>
+		<td class="td" align="right">所获证书:</td>
+        <td class="td"><textarea name="ttedu_suohuozhengshu" cols="23" rows="3">{$teach_info.ttedu_suohuozhengshu}</textarea></td>
+      </tr>
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">可辅导地区：</td>
+        <td class="td"> <textarea name="ttedu_jiajiaodiqu" cols="23" rows="3" >{$teach_info.ttedu_jiajiaodiqu}</textarea></td>
+		<td class="td" align="right">可辅导时间:</td>
+        <td class="td"><textarea name="ttedu_keyijiajiaoshijian" cols="23" rows="3">{$teach_info.ttedu_keyijiajiaoshijian}</textarea></td>
+      </tr>  
+	  <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" class="td" align="right">自我详细介绍：</td>
+        <td class="td" colspan="3"> <textarea name="ttedu_yuanlaijieshao" cols="70" rows="6" >{$teach_info.ttedu_xiangxijieshao}</textarea></td>
+      </tr>    
+	  
+    <tr onMouseOver="style.backgroundColor='#EEEEEE'" onMouseOut="style.backgroundColor='#FFFFFF'" bgcolor="#FFFFFF">
+        <td height="25" class="td">&nbsp;</td>
+        <td class="td"><input type="submit" name="button" id="button" value="确认提交"  class="btn"/></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+
+		  
+</body></html>

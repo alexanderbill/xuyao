@@ -1,0 +1,57 @@
+.focusPic {
+	BORDER-LEFT: #0081c6 1px solid; WIDTH: 234px; HEIGHT: 230px; MARGIN-LEFT: 2px;CLEAR: both; OVERFLOW: hidden; BORDER-RIGHT: #0081c6 1px solid
+}
+.focusPic .pic {
+	PADDING-BOTTOM: 0px; MARGIN: 2px 0px; PADDING-LEFT: 0px; WIDTH: 235px; PADDING-RIGHT: 0px; HEIGHT: 190px; OVERFLOW: hidden; PADDING-TOP: 0px
+}
+.focusPic H2 {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 4px; PADDING-LEFT: 8px; WIDTH: 220px; TEXT-OVERFLOW: ellipsis; PADDING-RIGHT: 0px; DISPLAY: block; WHITE-SPACE: nowrap; FLOAT: left; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 4px
+}
+.focusPic H2 A {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+.focusPic H2 A:hover {
+	COLOR: #9d0001; TEXT-DECORATION: none
+}
+.focusPic P {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 6px; LINE-HEIGHT: 1.5; MARGIN: 0px; PADDING-LEFT: 8px; WIDTH: 226px; PADDING-RIGHT: 0px; BACKGROUND: #fff8e3; FLOAT: left; PADDING-TOP: 6px
+}
+.focusPic P A {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+.focusPic P A:hover {
+	COLOR: #0f989c; TEXT-DECORATION: none
+}
+.focusPic .textNum {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 235px; PADDING-RIGHT: 0px; DISPLAY: block; CLEAR: both; PADDING-TOP: 0px
+}
+.focusPic .textNum .numt {
+	WIDTH: 113px; FLOAT: right; HEIGHT: 19px; MARGIN-RIGHT: 7px
+}
+.focusPic .textNum .bg1 {
+	BACKGROUND: url(../i/anbg.gif) no-repeat -596px -215px
+}
+.focusPic .textNum .bg2 {
+	BACKGROUND: url(../i/anbg.gif) no-repeat -596px -241px
+}
+.focusPic .textNum .bg3 {
+	BACKGROUND: url(../i/anbg.gif) no-repeat -596px -268px
+}
+.focusPic .textNum .bg4 {
+	BACKGROUND: url(../i/anbg.gif) no-repeat -596px -294px
+}
+.focusPic .textNum .numt UL {
+	WIDTH: 113px; FLOAT: left
+}
+.focusPic .textNum .numt LI {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; WIDTH: 28px; PADDING-RIGHT: 0px; DISPLAY: block; FLOAT: left; COLOR: #fff; FONT-WEIGHT: bold; PADDING-TOP: 6px
+}
+.focusPic .textNum .numt LI A {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; COLOR: #fff; PADDING-TOP: 0px
+}
+.focusPic .textNum .numt LI A:visited {
+	COLOR: #fff
+}
+.focusPic .textNum .numt LI A:hover {
+	COLOR: #ff0
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+ 
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>{$set_web_info.ttedu_titlename} | {$web_title}</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<META name=keywords content="{$set_web_info.ttedu_keyword} | {$web_title}">
+<META name=description content="{$set_web_info.ttedu_description} | {$web_title}">
+<META name=author content=助教网>
+<META name=copyright content=助教网> 
+<STYLE type=text/css>
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+</STYLE>
+<LINK rel=stylesheet type=text/css href="Public/css/EDUee.css">
+<LINK rel=stylesheet type=text/css href="Public/css/ForcePic.css">
+<SCRIPT language=javascript src="Public/js/ForcePic.js"></SCRIPT>
+
+<SCRIPT language=javascript src="Public/js/forcelog.js"></SCRIPT>
+
+<SCRIPT language=javascript src="Public/js/move_float.js"></SCRIPT>
+
+<META name=GENERATOR content="MSHTML 8.00.6001.19088"></HEAD>
+<BODY><!--[if !IE]>顶部开始<![endif]-->
+<DIV class=topT>
+<DIV class=topTl><A href="__APP__/index/index"><IMG src="Public/images/logobj.gif"></A> </DIV>
+<DIV class=topTc>
+<DIV class=topTcT>
+<DIV class=topTcT_left>
+<STYLE type=text/css>
+@import url(Public/css/float.css );
+</STYLE>
+
+
+
+
+<DIV id=bg></DIV>
+<DIV class=hidden id=selectItem >
+<DIV class="tit1 bgc_ccc move" onmousedown=drag(event,this)>
+<H2 style="margin-right:270px; padding-left:8px;height:29px; line-height:29px; vertical-align:middle;color:#fff;" class=left>请选择城市</H2><SPAN class="pointer" style="height:29px; color:#fff;line-height:29px; vertical-align:middle;" onclick=openBg(0);openSelect(0);>[关闭]</SPAN> </DIV>
+<DIV class="cont">
+
+<div style="margin-left:10px;">
+<volist name="SOWI" id="SOWI">
+<p style="float:left; margin-left:8px; margin-top:5px;"><a href="{$SOWI.ttedu_website}" target="_blank">{$SOWI.ttedu_webname}</a></p>
+</volist>
+</div>
+
+</DIV>
+<DIV class=cont>
+<DIV id=selectSub></DIV>
+</DIV>
+</DIV>
+
+
+
+
+当前城市：<STRONG style="COLOR: #000; FONT-SIZE: 14px; FONT-WEIGHT: bold">乌鲁木齐</STRONG> 
+[<A class="bton pointer" onclick=openBg(1);openSelect(1);></A>]　 <STRONG 
+class=red>助教网</STRONG> 
+【<A class=green href="__APP__/BBS/index" target=_blank>助教社区</A>】 </DIV>
+<DIV class=topTcT_right></DIV></DIV>
+<DIV class=topTcB><EM>{$set_web_info.ttedu_website}</EM> <IMG 
+src="Public/images/d14.gif">请家教热线：{$set_web_info.ttedu_tel}</DIV></DIV>
+<DIV class=topTr>
+
+<eq name="Think.session.username" value="">
+<A href="__APP__/index/index">登录</A> | 
+<else/>
+<div>
+<span style="color:#0000ff">{$Think.session.username}</span>&nbsp;您好！欢迎你回来！&nbsp;
+<A href="__APP__/member/index" style="color:#00ff00">个人中心</A>&nbsp;
+<A href="__APP__/Login/logout" style="color:#FF0000">退出登录</A>&nbsp;
+</div>
+</eq>
+<A class=red href="__APP__/TeachInfo/zhuce_teh" >教员注册</A> &nbsp;
+| <A class=red href="__APP__/HuiyuanInfo/xuesheng_zhuce" >学生注册</A>&nbsp;
+
+<BR><A onClick="varstrHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.baidu.com');">
+<IMG src="Public/images/d13.gif">设为首页</A>　
+<A href="javascript:window.external.AddFavorite('http://');">
+<IMG src="Public/images/d15.gif">收藏本站</A> </DIV></DIV>
+</DIV><!--顶部结束，导航开始-->
+
+<DIV  class=daobg01 >
+ 
+<DIV id=t_3_3_1>&nbsp;</DIV>
+ 
+<DIV id=t_3_3_2 class=t >
+<UL><LI>
+<A href="__APP__/index/index">首页</A></LI></UL></DIV>
+ 
+<DIV id=t_3_3_3  >&nbsp;</DIV>
+ 
+<DIV id=t_3_3_4 class=t style=" width:786px;" >
+<UL>
+  <LI><A href="__APP__/JiajiaoInfo/qing_edu">请家教</A></LI>
+  <LI><A href="__APP__/JiajiaoInfo/edu_info">家教信息</A></LI>
+  <LI><A href="__APP__/TeachInfo/tehlist">老师库</A></LI>
+  <LI><A href="__APP__/TeachInfo/zuo_edu">做家教</A></LI>
+  <LI><A href="__APP__/InfoDetail/edu_news">助教咨询</A></LI>
+  <LI><A href="__APP__/InfoDown/downloadlist">资料下载</A></LI>
+  <LI><A href="__APP__/SpinfoDetail/videolist">教学视频</A></LI></UL></DIV>
+<DIV id=t_3_3_5></DIV>
+ 
+
+</DIV>

@@ -1,0 +1,144 @@
+ 
+<!--头部部分-->
+<include file="Public:head_bbs" />
+
+
+<STYLE type=text/css>
+BODY {
+	TEXT-ALIGN: left; MARGIN: 0px; FONT: 400 12px/18px 宋体
+}
+FORM {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+P {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+TD {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+TH {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+DIV {
+	LINE-HEIGHT: 18px; FONT-SIZE: 12px
+}
+#hd {
+	ZOOM: 1
+}
+#hd .logo {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+#hd .sel {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 15px
+}
+#hd .login {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial; FLOAT: right; PADDING-TOP: 5px
+}
+#guide {
+	PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #6a9cff; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; COLOR: #fff; CLEAR: both; PADDING-TOP: 8px
+}
+#guide A {
+	COLOR: #fff; TEXT-DECORATION: none
+}
+#guide A:hover {
+	TEXT-DECORATION: underline
+}
+#main {
+	MARGIN: 0px 0px 0px -130px; WIDTH: 100%; FLOAT: left; OVERFLOW: hidden
+}
+#submain {
+	MARGIN: 0px 0px 0px 150px; WIDTH: 100%
+}
+#side {
+	TEXT-ALIGN: right; WIDTH: 250px; FLOAT: right; OVERFLOW: hidden
+}
+#ft {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 5px; BACKGROUND-COLOR: #e0e0e0; PADDING-LEFT: 5px; WIDTH: 100%; PADDING-RIGHT: 5px; CLEAR: both; PADDING-TOP: 5px
+}
+#tblist {
+	TABLE-LAYOUT: fixed
+}
+#tblist TD {
+	BORDER-BOTTOM: #e2e7f4 1px solid; PADDING-LEFT: 10px; WORD-BREAK: break-all
+}
+#tblist TR {
+	HEIGHT: 36px
+}
+#tblist A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+#tblist A:hover {
+	TEXT-DECORATION: underline
+}
+#tblist TD.t A {
+	COLOR: #0000ff; FONT-SIZE: 14px
+}
+#tblist TD.t A:visited {
+	COLOR: #800080
+}
+.rpcl {
+	COLOR: red
+}
+</STYLE>
+
+
+<DIV id=guide><A href="__URL__/index">社区首页</A></DIV>
+<DIV id=main>
+<DIV id=submain>
+<TABLE id=tblist border=0 cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR bgColor=#eef1f9>
+    <TD width="8%">帖子数</TD>
+    <TD width="20%">版块名</TD>
+    <TD width="20%">最后发帖</TD>
+    <TD width="8%">回复数</TD>
+	<TD width="20%">时间</TD>
+    <TD width="20%">最后作者</TD></TR>
+	
+<volist name="shequ_zhuti" id="shequ_zhuti" mod="2">
+  <eq name="mod" value="0"><TR bgcolor="#eef1f9"><else/><TR bgcolor="#ffffff"></eq>
+    <TD>{$shequ_zhuti.counts}</TD>
+    <TD><A href="__URL__/article_list/ttedu_zhuti_id/{$shequ_zhuti.ttedu_id}" target=_blank><B><FONT color=#e80c31>{$shequ_zhuti.ttedu_zhuti_topic}</FONT></B></A></TD>
+    <TD>
+	<volist name="shequ_zhuti['shequ_info']" id="shequ_info" offset="0" length="1">
+	<A href="__URL__/article/ttedu_id/{$shequ_info.ttedu_id}" target=_blank>{$shequ_info.ttedu_shequ_title}</A>
+	<eq name="shequ_info.ttedu_shifouretie" value="1">[<font color="#FF0000">热</font>]</eq>
+	</volist>
+	</TD>
+    <TD>
+	<volist name="shequ_zhuti['shequ_info']" id="shequ_info" offset="0" length="1">
+	{$shequ_info.counts}
+	</volist>
+	</TD>
+	<TD>
+	<volist name="shequ_zhuti['shequ_info']" id="shequ_info" offset="0" length="1">
+	{$shequ_info.ttedu_fbdate|date='Y-m-d H:i:s',###}
+	</volist>
+	</TD>
+    <TD>
+	<volist name="shequ_zhuti['shequ_info']" id="shequ_info" offset="0" length="1">
+		<volist name="shequ_info['person']" id="person" offset="0" length="1">
+			<compare name="person.mid" value="1" type="eq">
+			<a href="__APP__/TeachInfo/tehdetail/id/{$person.id}" style="color:#0000ff" target=_blank>{$person.name}（{$person.id}）</a>
+			</compare>
+			<compare name="person.mid" value="2" type="eq">
+			<a href="__APP__/HuiyuanInfo/huiyuandetail/id/{$person.id}" style="color:#0000ff">{$person.name}（{$person.id}）</a>
+			</compare>
+		</volist>
+	</volist>
+	</TD></TR>
+</volist>
+
+	
+</TBODY></TABLE></DIV></DIV>
+	  
+<DIV id=ft>助教·北京家教网﹫2011</DIV></BODY></HTML>

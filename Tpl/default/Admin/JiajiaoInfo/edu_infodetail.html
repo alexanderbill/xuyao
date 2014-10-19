@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="images/style.css">
+<title>修改课程</title>
+<script type="text/javascript" charset="utf-8" src="Public/admin/edit/kindeditor-min.js"></script>
+<script type="text/javascript">
+KE.show({
+	id : 'content1',
+	cssPath : './../index.css'
+});
+</script>
+
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<form  name="add" method="post" action="__URL__/update" enctype="multipart/form-data">
+<input type="hidden" value="{$jiajiao_info.ttedu_id}" name="ttedu_id" />
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">家教信息详情</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF">
+	<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="10%" class="td" align="right">信息编号：</td>
+        <td width="32%"  class="td">{$jiajiao_info.ttedu_id}</td>
+		<td width="16%" class="td" align="right">联系人：</td>
+        <td width="42%"  class="td">
+		<neq name="jiajiao_info.ttedu_huiyuan_id" value="0">
+		<a href="__APP__/Admin/HuiyuanInfo/update_member_stu/ttedu_id/{$jiajiao_info.ttedu_huiyuan_id}">{$jiajiao_info.ttedu_chengfu}</a>【会员】
+		<else/>
+		{$jiajiao_info.ttedu_chengfu}
+		</neq>
+		</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">学员性别：</td>
+        <td class="td">{$jiajiao_info.ttedu_sex} </td> 
+		<td class="td" align="right">学员年龄：</td>
+        <td class="td">{$jiajiao_info.ttedu_old} &nbsp;岁</td> 
+      </tr>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">学员人数：</TD>
+    <TD>{$jiajiao_info.ttedu_xueshengrenshu} &nbsp;人</TD>
+    <TD width="16%" align=right>求教科目：</TD>
+    <TD>{$jiajiao_info.ttedu_nianjikemu}</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">授课区域：</TD>
+    <TD class=yel>{$jiajiao_info.ttedu_shoukediqu}</TD>
+    <TD width="16%" align=right>详细住址：</TD>
+    <TD>{$jiajiao_info.ttedu_address}</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">乘车说明：</TD>
+    <TD class=yel colspan="3">{$jiajiao_info.ttedu_nalugongjiao}</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">学员要求：</TD>
+    <TD colspan="3">{$jiajiao_info.ttedu_laoshiyaoqiu} </TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">其他要求：</TD>
+    <TD colspan="3">{$jiajiao_info.ttedu_qitayaoqiu}</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">每周次数：</TD>
+    <TD>{$jiajiao_info.ttedu_meizhoucishu}&nbsp;次</TD>
+	<TD align=right>每次时间：</TD>
+    <TD>{$jiajiao_info.ttedu_meicishijian}&nbsp;小时</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">每小时报酬：</TD>
+    <TD>{$jiajiao_info.ttedu_meixiaoshibaochou}&nbsp;元</TD></TR>
+  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28"class="td" align="right">可授课时间：</TD>
+    <TD>{$jiajiao_info.ttedu_jutishijian}</TD>
+    <TD width="16%" align=right>发布时间：</TD>
+    <TD>{$jiajiao_info.ttedu_addtime|date='Y-m-d H:i:s',###}</TD></TR>
+	
+    </table></td>
+  </tr>
+</table></form>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<include file="Public:head2" />
+
+<LINK rel=stylesheet type=text/css href="Public/css/neweduee.css">
+<SCRIPT language=javascript> 
+//all by www.qpsh.com
+var currslid = 0;
+var slidint;
+function setfoc(id){
+	document.getElementById("focpic").src = picarry[id];
+	document.getElementById("foclnk").href = lnkarry[id];
+	document.getElementById("fttltxt").innerHTML = '<a href="'+lnkarry[id]+'" target="_blank">'+ttlarry[id]+'</a>';
+	currslid = id;
+	for(i=0;i<4;i++){
+	 document.getElementById("tmb"+i).className = "thubpic";
+	};
+	document.getElementById("tmb"+id).className ="thubpiccur";
+	focpic.style.visibility = "hidden";
+	focpic.filters[0].Apply();
+	if (focpic.style.visibility == "visible") {
+		focpic.style.visibility = "hidden";
+		focpic.filters.revealTrans.transition=23;
+	}
+	else {
+		focpic.style.visibility = "visible";
+		focpic.filters[0].transition=23;
+	}
+	focpic.filters[0].Play();
+	stopit();
+}
+ 
+function playnext(){
+	if(currslid==3){
+		currslid = 0;
+	}
+	else{
+		currslid++;
+	};
+	setfoc(currslid);
+	playit();
+}
+function playit(){
+	slidint = setTimeout(playnext,4500);
+}
+function stopit(){
+	clearTimeout(slidint);
+	}
+window.onload = function(){
+	playit();
+}
+function g(o){return document.getElementById(o);}
+function Hover(n){ 
+//如果有N个标签,就将i<=N; 
+for(var i=1;i<=3;i++)
+{
+	g('t_'+i).className='zxbg1';
+	g('tbc'+i).style.display='none';
+}
+	g('tbc'+n).style.display='block';
+	g('t_'+n).className='zxbg2'; 
+}
+</SCRIPT>
+
+
+<DIV class=zxtop>
+<DIV class=zxleft>
+<DIV class=zxt02>
+<H2><A href="__APP__/InfoDetail/infolist/ttedu_id/26">家<Br><Br><Br>教<Br><Br><Br>之<Br><Br><Br>路</A></H2></DIV>
+<UL class=zxline01>
+
+<volist name="jiajiaozhilu" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</UL>
+</DIV>
+
+<DIV class=zxbr style="float:left; height:368px">
+<IMG src="Public/images/4.jpg" width="210" height="118">
+<DIV style="height:20px"></DIV>
+<DIV class=zxt06x><A href="__APP__/InfoDetail/infolist/ttedu_id/15">-更多-</A> 
+<H2>教育新闻动态</H2>
+</DIV>
+<OL class=line01>
+
+<volist name="xinwendongtai" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+  
+  
+</OL></DIV>
+  
+
+<DIV class=zxmid style="height:180px;">
+<DIV class=zxt01><A href="__APP__/InfoDetail/infolist/ttedu_id/17">-更多-</A> 
+<H2 class=white>助教公告</H2>
+</DIV>
+
+<UL class=zxline>
+
+<volist name="zhujiaogonggao" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}<php> echo substr('123456789',0,4); </php></A></LI>
+</volist>
+
+  </UL></DIV>
+<DIV>
+<UL class=zxt03>
+  <LI id=t_1 class=zxbg2 onmouseover=x:Hover(1);>
+  <H2><A href="__APP__/InfoDetail/infolist/ttedu_id/18">小学教育</A></H2></LI>
+  <LI id=t_2 class=zxbg1 onmouseover=i:Hover(2);>
+  <H2><A href="__APP__/InfoDetail/infolist/ttedu_id/19">初中教育</A></H2></LI>
+  <LI id=t_3 class=zxbg1 onmouseover=i:Hover(3);>
+  <H2><A href="__APP__/InfoDetail/infolist/ttedu_id/20">高中教育</A></H2></LI></UL>
+<OL style="DISPLAY: block" id=tbc1 class="zxl fl">
+
+<volist name="xiaoxuejiaoyu" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<OL style="DISPLAY: none" id=tbc2 class="zxl fl">
+
+<volist name="chuzhongjiaoyu" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<OL style="DISPLAY: none" id=tbc3 class="zxl fl">
+
+<volist name="gaozhongjiaoyu" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL></DIV></DIV>
+</DIV>
+<DIV class=main><IMG src="Public/images/banner.jpg" width=949 
+height=80></DIV>
+<DIV class=main>
+<DIV class=zxbl>
+<DIV class=zxblt>
+<DIV class=zxt04><A href="__APP__/InfoDetail/infolist/ttedu_id/21">-更多-</A> 
+<H2>中考资讯</H2></DIV>
+<OL class=line01>
+
+<volist name="zhongkaozixun" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<DIV class=Rtu><IMG src="Public/images/new_3.gif"></DIV></DIV>
+<DIV class=zxt05><A href="__APP__/InfoDetail/infolist/ttedu_id/22">-更多-</A> 
+<H2>高考资讯</H2></DIV>
+<OL class=line01>
+
+<volist name="gaokaozixun" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<DIV class=Rtu><IMG src="Public/images/new_4.gif"></DIV>
+<DIV class=zxblt>
+<DIV class=zxt04><A href="__APP__/InfoDetail/infolist/ttedu_id/23">-更多-</A> 
+<H2>常见问题</H2>
+</DIV>
+<OL class=line01>
+
+<volist name="changjianwenti" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<DIV class=Rtu><IMG src="Public/images/new_1.gif"></DIV></DIV>
+<DIV class=zxt05><A href="__APP__/InfoDetail/infolist/ttedu_id/24">-更多-</A> 
+<H2>心灵沟通</H2>
+</DIV>
+<OL class=line01>
+
+<volist name="xinlingoutong" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL>
+<DIV class=Rtu><IMG src="Public/images/new_2.gif"></DIV></DIV>
+<DIV class=zxbr>
+<DIV class=zxt06><A href="__APP__/InfoDetail/infolist/ttedu_id/25">-更多-</A> 
+<H2>好书推荐</H2>
+</DIV>
+<OL class=line01>
+
+<volist name="haoshutuijian" id="vo">
+  <LI><A href="__APP__/InfoDetail/infodetail/ttedu_id/{$vo.ttedu_id}" target=_blank>{$vo.ttedu_title}</A></LI>
+</volist>
+
+</OL></DIV>
+</DIV><!--友情链接--><!--友情链接-->
+<DIV class=ljmain>
+<DIV class=ljnr></DIV>
+
+<DIV class=ljnr></DIV></DIV><!--主区结束，底区开始-->
+<include file="Public:foot" />

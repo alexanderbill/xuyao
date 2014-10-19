@@ -1,0 +1,75 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>联系记录管理</title>
+<script language="javascript"> 
+<!-- 
+function CheckAll(){ 
+ for (var i=0;i<eval(form1.elements.length);i++){ 
+  var e=form1.elements[i]; 
+  if (e.name!="allbox") e.checked=form1.allbox.checked; 
+ } 
+} 
+--> 
+</script> 
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#ffffff">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">订单管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+       <tr><td height="40" colspan="5" align="left"><span style="width:100px">&nbsp;</span>
+			<input type="button" name="Submit1" value="老师预约学生"  class="btn" onclick="location.href='__APP__/Admin/JiajiaoInfo/admin_order'"/>&nbsp;&nbsp;
+			<input type="button" name="Submit2" value="学生预约老师"  class="btn" onclick="location.href='__APP__/Admin/JiajiaoInfo/admin_order2'"/>
+		</td></tr>
+      <tr>
+        <td colspan="3" ><table width="100%" border="0" cellpadding="5" cellspacing="0">
+		   <tr bgcolor="#e7f3e7">
+			  <td width="10%" class="td" height="25">订单号</td>
+			  <td width="20%" class="td">老师</td>
+			  <td width="11%" class="td">学生/家教信息</td>
+			  <td width="26%" class="td">时间</td>
+			  <td width="18%" class="td">处理状态</td>
+			  <td width="15%" class="td">操作</td>
+		  </tr>
+		  <tr><td height="30" colspan="6" align="center">老师预约学生</td></tr>
+			<volist name="teach_to_stu" id="vo">		  
+            <tr>
+              <td class="td">{$vo.ttedu_code}</td>
+              <td class="td">
+			  <volist name="vo['person']" id="person">
+			  <a href="__APP__/Admin/TeachInfo/detail_member_teh/ttedu_id/{$person.id}" style="color:#0000ff">{$person.name}[{$person.id}]</a>
+			  </volist>
+			  </td>
+              <td class="td">
+			  <a href="__APP__/Admin/JiajiaoInfo/edu_infodetail/ttedu_id/{$vo.ttedu_jiajiaoid}" style="color:#0000ff">信息详情</a>
+			  </td>
+              <td class="td">{$vo.ttedu_adddate|date='Y-m-d H:i:s',###}</td>
+              <td class="td">
+			  <eq name="vo.ttedu_shifouchuli" value="0">
+			  	<a href="__APP__/Admin/JiajiaoInfo/t_up_shifouchuli/ttedu_id/{$vo.ttedu_id}/shifouchuli/1" style="color:#0000ff">通过</a> |
+			  	<a href="__APP__/Admin/JiajiaoInfo/t_up_shifouchuli/ttedu_id/{$vo.ttedu_id}/shifouchuli/2" style="color:#0000ff">不通过</a></eq>
+			  <eq name="vo.ttedu_shifouchuli" value="1">订单成功</eq>
+			  <eq name="vo.ttedu_shifouchuli" value="2">订单失败</eq>
+			  </td>
+              <td class="td">
+			  	<input type="button" name="Submit3" value="详情"  class="btn" 
+					onclick="window.location.href='__APP__/Admin/JiajiaoInfo/edu_infodetail/ttedu_id/'+{$vo.ttedu_jiajiaoid} "/>
+			  	<input type="button" name="Submit" value="删除" class="btn" 
+					onclick="javascript:if(confirm('确定删除？删除后不可恢复!')){
+						window.location.href='__APP__/Admin/TeachInfo/delete_teach_to_stu/ttedu_id/'+{$vo.ttedu_id} ;}else{history.go(0);}" />
+			  </td>
+            </tr>
+			</volist>
+			<tr><td height="30" align="center" colspan="6">{$page}</td></tr>
+			
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

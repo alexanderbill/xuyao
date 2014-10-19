@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="images/style.css">
+<title>修改课程</title>
+<script type="text/javascript" charset="utf-8" src="Public/admin/edit/kindeditor-min.js"></script>
+<script type="text/javascript">
+KE.show({
+	id : 'content1',
+	cssPath : './../index.css'
+});
+</script>
+
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<form  name="add" method="post" action="__URL__/insert_jishu" enctype="multipart/form-data">
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">添加视频集数</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">视频标题</td>
+        <td width="84%"  class="td">{$spinfo_detail.ttedu_sptitle}
+          <input name="ttedu_spinfo_id" type="hidden" value="{$spinfo_detail.ttedu_id}" /></td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">集数标题</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_jishu" type="text" value="" size="15"  />&nbsp;如：第一集</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">播放地址</td>
+        <td width="84%"  class="td">
+          <input name="ttedu_bofangdizhi" type="text" value="" size="40"  />&nbsp;请正确填写播放地址</td>
+      </tr>
+	  <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#F1F5F8'" bgcolor="#F1F5F8" >
+        <td height="28" width="16%" class="td">缩略图</td>
+        <td width="84%"  class="td"><input name="image" id="image" type="file" class="file huge" />&nbsp;上传允许文件类型：gif png jpg 图像文件</td>
+      </tr>
+	 
+    <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor='#FFFFFF'" bgcolor="#FFFFFF">
+        <td height="25" class="td">&nbsp;</td>
+        <td class="td"><input type="submit" name="button" id="button" value="确认提交"  class="btn"/></td>
+      </tr>
+    </table></td>
+  </tr>
+</table></form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>社区板块管理</title>
+<script language="javascript"> 
+<!-- 
+function CheckAll(){ 
+ for (var i=0;i<eval(form1.elements.length);i++){ 
+  var e=form1.elements[i]; 
+  if (e.name!="allbox") e.checked=form1.allbox.checked; 
+ } 
+} 
+--> 
+</script> 
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">社区板块管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+        <form id="form1" name="form1" method="post" action="admin_news.asp?del=checkbox"> 
+      <tr>
+       <td align="center">&nbsp;
+		 </td>
+      </tr>
+      <tr>
+        <td colspan="3" ><table width="100%" border="0" cellpadding="5" cellspacing="0">
+		  
+		  
+		  <volist name="shequ_reply_info" id="vo">
+            <tr>
+			  <td width="5%" class="td"><input name="ID" type="checkbox" id="ID" value="" /></td>
+              <td width="5%" class="td">用户：</td>
+              <td width="31%" class="td">
+			  <eq name="vo.person" value="">
+			  		匿名
+			  <else/>
+			  	<volist name="vo['person']" id="person">
+					<compare name="person.mid" value="1" type="eq">
+					<a href="__APP__/Admin/TeachInfo/update_member_teh/ttedu_id/{$person.id}" style="color:#0000ff">{$person.name}</a>
+					</compare>
+					<compare name="person.mid" value="2" type="eq">
+					<a href="__APP__/Admin/HuiyuanInfo/update_member_stu/ttedu_id/{$person.id}" style="color:#0000ff">{$person.name}</a>
+					</compare>
+				</volist>
+			  </eq>
+			  </td>
+			  <td width="5%" class="td">时间：</td>
+              <td width="34%" class="td">{$vo.ttedu_fbdate|date='Y-m-d H:i:s',###}</td>
+			  <td width="20%" class="td" align="center">
+			  <input type="button" name="Submit3" value="删除"  class="btn"
+					onclick="javascript:if(confirm('确定删除？删除后不可恢复!')){
+					window.location.href='__URL__/delete_reply/ttedu_id/'+{$vo.ttedu_id}+'/ttedu_info_id/'+{$vo.ttedu_info_id};}else{history.go(0);}" />
+			 </td>
+            </tr>
+			<tr>
+              <td class="td" height="60">&nbsp;</td>
+              <td class="td">内容：</td>
+              <td class="td" colspan="4">{$vo.ttedu_reply_content}</td>
+            </tr>
+		  </volist>
+			
+			
+          </table>
+            </td>
+      </tr>
+      <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor=''" bgcolor="">
+        <td width="57" height="30" align="center">
+         </td>
+        <td width="725" height="30">{$page3}</td>
+      </tr> 
+	  </form> 
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

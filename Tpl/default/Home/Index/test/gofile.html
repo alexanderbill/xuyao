@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title> 图片上传</title>
+<load href='__PUBLIC__/Css/common.css' />
+ </head>
+ <body>
+ <div class="main">
+ 带水印的图片。
+ <div id="main" class="main" >
+<div class="image">
+ <volist name='list' id='vo'>
+<table width="190" border="0" cellspacing="0" cellpadding="0">
+ <tr>
+    <td width="126" rowspan="2"><img src="__PUBLIC__/Uploads/{$vo.ttedu_huiyuanzhaopian}" /></td>
+    <td width="64">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><img src="__PUBLIC__/Uploads/{$vo.ttedu_huiyuanzhaopian}" /></td>
+  </tr>
+  <tr>
+    <td>{$vo.ttedu_zhucedate|date='Y-m-d H:i:s',###}</td>
+  </tr>
+</table>  </volist>
+</div>
+<div class="content">
+<form id="upload" method='post' action="__URL__/upload/" enctype="multipart/form-data">
+<table cellpadding=3 cellspacing=3 width="450PX">
+<tr>
+	<td colspan="2" class="tLeft">
+	<div class="result" style="background:#E9E9F3">上传允许文件类型：gif png jpg 图像文件，分别生产2张缩略图。并且把原图删掉,点击稍大的图将会在新窗口中显示带水印的图片</div>
+	</td>
+</tr>
+
+<tr>
+	<td class="tRight tTop">用户名</td>
+	<td class="tLeft tTop">
+<div class="impBtn  fLeft" ><input  type="text" name="ttedu_username"   /></div>
+	<table id='tbl' style="clear:both"></table>
+ 
+</td>
+</tr>
+
+
+<tr>
+	<td class="tRight tTop"></td>
+	<td class="tLeft tTop">
+<div class="impBtn  fLeft" ><input name="image" id="image" type="file" class="file huge" /></div>
+	<table id='tbl' style="clear:both"></table>
+  <input type="submit" value="提交" class="button" >
+</td>
+</tr>
+ 
+</table>
+</form>
+</div>
+</div>
+
+</div>
+ </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Js/editor/kindeditor.js"></script>
+<script type="text/javascript">
+    KE.show({
+        id : 'content_1' //TEXTAREA输入框的ID
+   });
+</script>
+</head>
+
+<body>
+
+<form method='post' id="form1" name="form1"action="__URL__/edit"  enctype="multipart/form-data">
+<table cellpadding=3 cellspacing=3 >
+<tr>
+	<td class="tRight" width="10%">标题：</td>
+	<td class="tLeft" ><input type="text" class="huge bLeftRequire" name="title" value="{$vo.title}"></td>
+</tr>
+<tr>
+	<td class="tRight tTop">内容：</td>
+	<td><textarea id="content_2" name="content" style="width:600px;height:300px;">{$vo.content}</textarea>
+	</td>
+</tr>
+
+<tr>
+	<td></td>
+	<td class="center"><div style="width:85%;margin:5px">
+	<input type="hidden" class="huge bLeftRequire" name="id" value="{$vo.id}">
+	<input type="submit" value="更 新" class="button medium">
+	</div></td>
+</tr>
+</table>
+</form>
+
+
+
+<form method="post" action="__URL__/insert" >
+标题： 
+<textarea id="content_1" name="ttedu_btype_name" style="width:600px;height:300px;">{$vo.content}</textarea>
+ 
+<input type="submit" value="新增数据">
+</form>
+<!--很环输出查诟绌果数据集-->
+<volist name='list' id='vo' >
+编号:{$vo.ttedu_id} <a href="__URL__/del/id/{$vo.ttedu_id}" >删除</a><br/>
+标题：<a href="__URL__/xiugai/id/{$vo.ttedu_id}" >{$vo.ttedu_btype_name}</a><br/>
+时间：{$vo.ttedu_bfbdate|date='Y-m-d H:i:s',###}<hr>
+编辑：
+ 
+ 
+ <form method="post" action="__URL__/edit" >
+标题：<input type="text" name="ttedu_btype_name"><br />
+     <input type="hidden" name="id" value="{$vo.ttedu_id}">
+<input type="submit" value="修改">
+</form>
+</volist>
+</div> <div class="green-black">{$page}</div>
+
+ <form method="post" action="__URL__/search" >
+查询：用户名<input type="text" name="username"><br />
+密码：<input type="text" name="password"><br />
+  
+<input type="submit" value="修改">
+</form>
+
+</body>
+</html>

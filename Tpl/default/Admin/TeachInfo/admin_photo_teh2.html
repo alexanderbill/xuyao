@@ -1,0 +1,64 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" id="css" href="Public/admin/images/style.css">
+<title>新闻管理</title>
+<script language="javascript"> 
+<!-- 
+function CheckAll(){ 
+ for (var i=0;i<eval(form1.elements.length);i++){ 
+  var e=form1.elements[i]; 
+  if (e.name!="allbox") e.checked=form1.allbox.checked; 
+ } 
+} 
+--> 
+</script>
+
+<style type="text/css">
+body,table{
+font-size:12px;
+}
+form,input{
+font-size:12px;
+}
+</style>
+</head>
+<body>
+<table width="95%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#666666">
+  <tr>
+    <td height="30" background="Public/admin/images/bg_list.gif"><div  style="padding-left:10px; font-weight:bold; color:#FFFFFF">老师照片管理</div></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+      <tr><td align="center">
+	  		<input type="button" name="Submit1" value="个人照片"  class="btn" 
+				onclick="location.href='__APP__/Admin/TeachInfo/admin_photo_teh/ttedu_id/'+{$ttedu_id}"/>&nbsp;&nbsp;
+			<input type="button" name="Submit2" value="证件照片"  class="btn" 
+				onclick="location.href='__APP__/Admin/TeachInfo/admin_photo_teh2/ttedu_id/'+{$ttedu_id}"/>
+	  </td></tr>
+      <tr>
+        <td colspan="3" ><table width="100%" border="0" cellpadding="10" cellspacing="0">
+            
+			<volist name="pic_zj" id="vo" mod="3">
+			<eq name="mod" value="1"><tr></eq>
+             <td align="center">
+			 <div><img src="Public/Uploads/{$vo.ttedu_pic}" width="250" height="200" /></div>
+			 <div>{$vo.ttedu_beizhu}</div>
+			 </td>
+            <eq name="mod" value="3"><tr></eq>
+			</volist>
+			
+			
+          </table>
+            </td>
+      </tr>
+     <tr onmouseover="style.backgroundColor='#EEEEEE'" onmouseout="style.backgroundColor=''" bgcolor="">
+        <td width="723" height="30" align="center"></td>
+      </tr>  
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

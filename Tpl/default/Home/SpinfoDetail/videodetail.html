@@ -1,0 +1,102 @@
+<include file="Public:head2" />
+
+
+
+<DIV class="main mainbg clearfix">
+<DIV class=PleftM>
+<DIV class=rcur>
+<P><STRONG>当前位置：</STRONG><A href="http://www.eduease.com/">首页</A>&gt; 
+<STRONG>教学视频</STRONG></P></DIV>
+<DIV class=tit01>
+<DIV class=Ptit01T1><IMG src="Public/images/d10.gif"> 
+<H2><strong>教学视频</strong></H2>
+</DIV>
+
+	<TABLE border=0 cellSpacing=0 cellPadding=0 width="100%" align=center>
+	  <TR><TD>&nbsp;</TD></TR>
+	  <TR class=BGWhite vAlign=top>
+          <TD align=middle>
+		  
+		  <volist name="spbtype_info" id="vo">
+			&nbsp; <A href="__URL__/videolist/ttedu_spbtype_id/{$vo.ttedu_id}" style="color:#006600;">
+			<eq name="vo.ttedu_id" value="$ttedu_spbtype_id"><font color="#FF0000">{$vo.ttedu_spbtype_name}</font><else/>{$vo.ttedu_spbtype_name}</eq></A>&nbsp;
+		  </volist>
+		  
+		  </TD></TR>
+        <TR>
+          <TD class=WordRed80S width="90%" align=middle>
+		  －－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－</TD></TR></TBODY></TABLE>
+		  
+		  
+      <TABLE class=BGWhite border=0 cellSpacing=0 cellPadding=0 width="100%" align=center>
+		  <TBODY>
+		  <TR>
+			<TD colSpan=2 align=middle><span style="font-size:14px; color:#006600">{$spinfo_detail.ttedu_sptitle}</span>
+			  <HR width="95%"> 
+		</TD></TR>
+		
+		  <TR><TD class=BGWhite vAlign=top width="100%" align=center><BR>
+		  
+		 <volist name="shiping_jishu" id="vo">
+		  <A href="__URL__/videodetail/ttedu_id/{$spinfo_detail.ttedu_id}/jishu/{$vo.ttedu_id}">
+			<eq name="vo.ttedu_id" value="$jishu">
+				<FONT color=#ff0000>{$vo.ttedu_jishu}</FONT></A>&nbsp;&nbsp;
+			<else/>
+				<FONT color=#0066cc>{$vo.ttedu_jishu}</FONT></A>&nbsp;&nbsp;
+			</eq>
+			</volist>
+		</TD></TR>
+		  <TR><TD class=BGWhite vAlign=top width="100%" align=center><BR>
+		  
+		  <volist name="shiping_jishu" id="vo">
+			<eq name="vo.ttedu_id" value="$jishu">
+			 
+                    
+                    <embed src="{$vo.ttedu_bofangdizhi}" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+			</eq>
+		  </volist>
+			
+		</TD></TR>
+		<TR><TD class=BGWhite vAlign=top width="100%" align=left><BR>
+		  视频介绍：<br/>{$spinfo_detail.ttedu_spcontent}
+		</TD></TR>
+  <TR>
+    <TD colSpan=2 align=middle><BR><INPUT class=SmallButton onclick=window.close() value=关闭窗口 type=button><BR><BR>视频版权归原作者所有，未经允许请勿转载，如有任何问题请联系我们。
+      <HR width="95%">
+      <BR><BR></TD></TR></TBODY></TABLE>
+
+			
+			
+				  
+<DIV class=num></DIV></DIV></DIV><!--中部左区结束，右区开始-->
+<DIV class=PrightM>
+<DIV class=tit01>
+<DIV class=zxtit01T2>
+<H2><IMG src="Public/images/d03.gif">本站搜索</H2></DIV>
+<DIV>
+<DIV class=s01>
+<FORM method=post action="__APP__/index/mfsearch">
+<input type="hidden" name="types" value="5" />
+<INPUT class=seainpu 
+onclick="this.value=''" value="信息标题" size=10 type=text name="titles"> 
+<SELECT style="WIDTH: 95px" id=select3 class=input_text name="subject"> 
+<OPTION selected 
+  value="">所有文章</OPTION> <OPTION value=15>新闻动态</OPTION> <OPTION 
+  value=17>助教公告</OPTION> <OPTION value=18>小学教育</OPTION> <OPTION 
+  value=19>初中教育</OPTION> <OPTION value=20>高中教育</OPTION> <OPTION 
+  value=21>中考咨询</OPTION> <OPTION value=22>高考咨询</OPTION> <OPTION 
+  value=23>常见问题</OPTION> <OPTION value=24>心灵沟通</OPTION> <OPTION 
+  value=25>好书推荐</OPTION> <OPTION value=26>家教之路</OPTION> <OPTION 
+  value=27>其他咨询</OPTION> </SELECT> <SPAN 
+class=seacbg1><INPUT id=imageField src="Public/images/but.gif" type=image 
+name=imageField> </SPAN></FORM>
+</DIV></DIV></DIV>
+
+  <include file="Public:right_info" />  
+  
+</DIV><!--主区结束，底区开始--><!--友情链接-->
+
+
+
+
+<include file="Public:foot" />
