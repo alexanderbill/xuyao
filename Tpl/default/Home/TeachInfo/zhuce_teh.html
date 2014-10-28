@@ -2,8 +2,8 @@
  
  
 <SCRIPT type=text/javascript src="Public/js/moveloc.js"></SCRIPT>
- <load href="__PUBLIC__/Js/Jquery/jquery.js" />
-    <load href="__PUBLIC__/Js/Jquery/jquery.form.js" />
+ <load href="Public/js/Jquery/jquery.js" />
+    <load href="Public/js/Jquery/jquery.form.js" />
     
     <script language="JavaScript">
     <!--
@@ -206,14 +206,23 @@ name="ttedu_sex">女 </DIV>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>出生日期</LABEL> <INPUT 
 id=born class=zcinput maxLength=20 size=20 type=text name="ttedu_birth"> <SPAN 
 class=zsbg>例如：1960-07-15</SPAN> </DIV>
-<DIV>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>目前学历</LABEL> 
 <SELECT id=educational_level name="ttedu_mqxueli"> <OPTION selected 
-  value="">请选择学历</OPTION> <OPTION value=大专以下>大专以下</OPTION> <OPTION 
-  value=大专在读>大专在读</OPTION> <OPTION value=大专毕业>大专毕业</OPTION> <OPTION 
-  value=本科在读>本科在读</OPTION> <OPTION value=本科毕业>本科毕业</OPTION> <OPTION 
-  value=研究生在读>研究生在读</OPTION> <OPTION value=硕士在读>硕士在读</OPTION> <OPTION 
-  value=硕士毕业>硕士毕业</OPTION> <OPTION value=博士在读>博士在读</OPTION> <OPTION 
+  value="">请选择学历</OPTION> 
+<OPTION value=大专以下>大专以下</OPTION> 
+<OPTION 
+  value=大专在读>大专在读</OPTION> 
+<OPTION value=大专毕业>大专毕业</OPTION> 
+<OPTION 
+  value=本科在读>本科在读</OPTION> 
+<OPTION value=本科毕业>本科毕业</OPTION> 
+<OPTION 
+  value=研究生在读>研究生在读</OPTION> 
+<OPTION value=硕士在读>硕士在读</OPTION> 
+<OPTION 
+  value=硕士毕业>硕士毕业</OPTION> 
+<OPTION value=博士在读>博士在读</OPTION> 
+<OPTION 
   value=博士毕业>博士毕业</OPTION></SELECT> </DIV>
   
 <!--  
@@ -229,74 +238,92 @@ class=zsbg>请中文相关专业统一填写"中文"</SPAN> </DIV><!-- 身份隐
 
 <DIV style="DISPLAY: none" id=inden1><LABEL for=confirm_password><STRONG 
 class=red>*</STRONG>目前身份</LABEL> <SELECT id=indentity_stu size=1 
-name="ttedu_mqshengfei1"> <OPTION selected value="">请选择身份</OPTION> <OPTION 
-  value=自学考试学生>自学考试生</OPTION> <OPTION value=函授（网络）学生>函授（网络）学生</OPTION> <OPTION 
-  value=成教学生>成教学生</OPTION> <OPTION value=在校大一学生>在校大一学生</OPTION> <OPTION 
-  value=在校大二学生>在校大二学生</OPTION> <OPTION value=在校大三学生>在校大三学生</OPTION> <OPTION 
-  value=在校大四学生>在校大四学生</OPTION> <OPTION value=在校大五学生>在校大五学生</OPTION> <OPTION 
-  value=在读硕士学生>在读硕士生</OPTION> <OPTION value=硕士进修老师>硕士进修老师</OPTION> <OPTION 
-  value=在读博士学生>在读博士生</OPTION> <OPTION value=其他学生>其他学生</OPTION></SELECT> </DIV>
+name="ttedu_mqshengfei1"> <OPTION selected value="">请选择身份</OPTION> 
+<OPTION 
+  value=自学考试学生>自学考试生</OPTION> 
+<OPTION value=函授（网络）学生>函授（网络）学生</OPTION> 
+<OPTION 
+  value=成教学生>成教学生</OPTION> 
+<OPTION value=在校大一学生>在校大一学生</OPTION> 
+<OPTION 
+  value=在校大二学生>在校大二学生</OPTION> 
+<OPTION value=在校大三学生>在校大三学生</OPTION> 
+<OPTION 
+  value=在校大四学生>在校大四学生</OPTION> 
+<OPTION value=在校大五学生>在校大五学生</OPTION> 
+<OPTION 
+  value=在读硕士学生>在读硕士生</OPTION> 
+<OPTION value=硕士进修老师>硕士进修老师</OPTION> 
+<OPTION 
+  value=在读博士学生>在读博士生</OPTION> 
+<OPTION value=其他学生>其他学生</OPTION></SELECT> </DIV>
 <DIV style="DISPLAY: none" id=inden2><LABEL for=confirm_password><STRONG 
 class=red>*</STRONG>目前身份</LABEL> <SELECT id=indentity_tea name="ttedu_mqshengfei2"> 
-  <OPTION selected value="">请选择身份</OPTION> <OPTION value=离职幼儿教师>离职幼儿教师</OPTION> 
-  <OPTION value=退休幼儿教师>退休幼儿教师</OPTION> <OPTION value=进修幼儿教师>进修幼儿教师</OPTION> 
-  <OPTION value=在职幼儿教师>在职幼儿教师</OPTION> <OPTION value=""></OPTION> <OPTION 
-  value=离职小学教师>离职小学教师</OPTION> <OPTION value=退休小学教师>退休小学教师</OPTION> <OPTION 
-  value=进修小学教师>进修小学教师</OPTION> <OPTION value=在职小学教师>在职小学教师</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=离职初中教师>离职初中教师</OPTION> <OPTION 
-  value=退休初中教师>退休初中教师</OPTION> <OPTION value=进修初中教师>进修初中教师</OPTION> <OPTION 
-  value=在职初中教师>在职初中教师</OPTION> <OPTION value=""></OPTION> <OPTION 
-  value=离职高中教师>离职高中教师</OPTION> <OPTION value=退休高中教师>退休高中教师</OPTION> <OPTION 
-  value=进修高中教师>进修高中教师</OPTION> <OPTION value=在职高中教师>在职高中教师</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=硕士进修老师>硕士进修老师</OPTION> <OPTION 
-  value=离职大学教师>离职大学教师</OPTION> <OPTION value=退休大学教师>退休大学教师</OPTION> <OPTION 
-  value=在职大学教师>在职大学教师</OPTION> <OPTION value=""></OPTION> <OPTION 
-  value=离职专业培训机构教师>离职专业培训机构教师</OPTION> <OPTION 
-  value=退休专业培训机构教师>退休专业培训机构教师</OPTION> <OPTION 
-  value=进修专业培训机构教师>进修专业培训机构教师</OPTION> <OPTION 
-  value=在职专业培训机构教师>在职专业培训机构教师</OPTION> <OPTION value=""></OPTION> <OPTION 
+  <OPTION selected value="">请选择身份</OPTION> 
+<OPTION value=离职幼儿教师>离职幼儿教师</OPTION> 
+  <OPTION value=退休幼儿教师>退休幼儿教师</OPTION> 
+<OPTION value=进修幼儿教师>进修幼儿教师</OPTION> 
+  <OPTION value=在职幼儿教师>在职幼儿教师</OPTION> 
+<OPTION value=""></OPTION> 
+<OPTION 
+  value=离职小学教师>离职小学教师</OPTION> 
+<OPTION value=退休小学教师>退休小学教师</OPTION> 
+<OPTION 
+  value=进修小学教师>进修小学教师</OPTION> 
+<OPTION value=在职小学教师>在职小学教师</OPTION> 
+<OPTION 
+  value=""></OPTION> 
+<OPTION value=离职初中教师>离职初中教师</OPTION> 
+<OPTION 
+  value=退休初中教师>退休初中教师</OPTION> 
+<OPTION value=进修初中教师>进修初中教师</OPTION> 
+<OPTION 
+  value=在职初中教师>在职初中教师</OPTION> 
+<OPTION value=""></OPTION> 
+<OPTION 
+  value=离职高中教师>离职高中教师</OPTION> 
+<OPTION value=退休高中教师>退休高中教师</OPTION> 
+<OPTION 
+  value=进修高中教师>进修高中教师</OPTION> 
+<OPTION value=在职高中教师>在职高中教师</OPTION> 
+<OPTION 
+  value=""></OPTION> 
+<OPTION value=硕士进修老师>硕士进修老师</OPTION> 
+<OPTION 
+  value=离职大学教师>离职大学教师</OPTION> 
+<OPTION value=退休大学教师>退休大学教师</OPTION> 
+<OPTION 
+  value=在职大学教师>在职大学教师</OPTION> 
+<OPTION value=""></OPTION> 
+<OPTION 
+  value=离职专业培训机构教师>离职专业培训机构教师</OPTION> 
+<OPTION 
+  value=退休专业培训机构教师>退休专业培训机构教师</OPTION> 
+<OPTION 
+  value=进修专业培训机构教师>进修专业培训机构教师</OPTION> 
+<OPTION 
+  value=在职专业培训机构教师>在职专业培训机构教师</OPTION> 
+<OPTION value=""></OPTION> 
+<OPTION 
   value=其他教师>其他教师</OPTION></SELECT> </DIV>
 <DIV style="DISPLAY: none" id=inden3><LABEL for=confirm_password><STRONG 
 class=red>*</STRONG>目前身份</LABEL> <SELECT id=indentity_out name="ttedu_mqshengfei3"> 
-  <OPTION selected value="">请选择身份</OPTION> <OPTION 
-  value=海外工作归国人员>海外工作归国人员</OPTION> <OPTION value=海外留学归国人员>海外留学归国人员</OPTION> 
-  <OPTION value=海外华侨>海外华侨</OPTION> <OPTION value=外籍华人>外籍华人</OPTION> <OPTION 
-  value=外籍教师>外籍教师</OPTION> <OPTION value=外籍留学生>外籍留学生</OPTION> <OPTION 
+  <OPTION selected value="">请选择身份</OPTION> 
+<OPTION 
+  value=海外工作归国人员>海外工作归国人员</OPTION> 
+<OPTION value=海外留学归国人员>海外留学归国人员</OPTION> 
+  <OPTION value=海外华侨>海外华侨</OPTION> 
+<OPTION value=外籍华人>外籍华人</OPTION> 
+<OPTION 
+  value=外籍教师>外籍教师</OPTION> 
+<OPTION value=外籍留学生>外籍留学生</OPTION> 
+<OPTION 
   value=普通外籍人士>普通外籍人士</OPTION></SELECT> </DIV><!-- 身份隐藏区域结束  --><!-- 学生隐藏区域开始 -->
 <DIV style="DISPLAY: none" id=student1>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>就读高校</LABEL> 
 <SELECT id=study_school name="ttedu_biyexuexiao1"> <OPTION selected 
-  value="">请选择高校</OPTION> <OPTION value=北京大学>北京大学</OPTION> <OPTION 
-  value=清华大学>清华大学</OPTION> <OPTION value=中国人民大学>中国人民大学</OPTION> <OPTION 
-  value=北京师范大学>北京师范大学</OPTION> <OPTION value=北京交通大学>北京交通大学</OPTION> <OPTION 
-  value=首都师范大学>首都师范大学</OPTION> <OPTION value=北京第二外国语学院>北京第二外国语学院</OPTION> 
-  <OPTION value=北京邮电大学>北京邮电大学</OPTION> <OPTION value=北京理工大学>北京理工大学</OPTION> 
-  <OPTION value=北京外国语大学>北京外国语大学</OPTION> <OPTION value=北京科技大学>北京科技大学</OPTION> 
-  <OPTION value=中央音乐学院>中央音乐学院</OPTION> <OPTION value=中央美术学院>中央美术学院</OPTION> 
-  <OPTION value=中国政法大学>中国政法大学</OPTION> <OPTION value=北京语言大学>北京语言大学</OPTION> 
-  <OPTION value=中央财经大学>中央财经大学</OPTION> <OPTION value=中国音乐学院>中国音乐学院</OPTION> 
-  <OPTION value=北京化工大学>北京化工大学</OPTION> <OPTION value=外交学院>外交学院</OPTION> <OPTION 
-  value=中央戏剧学院>中央戏剧学院</OPTION> <OPTION value=中国戏曲学院>中国戏曲学院</OPTION> <OPTION 
-  value=北京舞蹈学院>北京舞蹈学院</OPTION> <OPTION value=北京电影学院>北京电影学院</OPTION> <OPTION 
-  value=首都体育学院>首都体育学院</OPTION> <OPTION value=北京体育大学>北京体育大学</OPTION> <OPTION 
-  value=中国科学院研究生院>中国科学院研究生院</OPTION> <OPTION value=北京航空航天大学>北京航空航天大学</OPTION> 
-  <OPTION value=对外经济贸易大学>对外经济贸易大学</OPTION> <OPTION value=北京工业大学>北京工业大学</OPTION> 
-  <OPTION value=中国矿业大学(北京)>中国矿业大学(北京)</OPTION> <OPTION 
-  value=中国农业大学>中国农业大学</OPTION> <OPTION value=北京林业大学>北京林业大学</OPTION> <OPTION 
-  value=中央民族大学>中央民族大学</OPTION> <OPTION value=中国地质大学(北京)>中国地质大学(北京)</OPTION> 
-  <OPTION value=北方工业大学>北方工业大学</OPTION> <OPTION value=北京工商大学>北京工商大学</OPTION> 
-  <OPTION value=北京中医药大学>北京中医药大学</OPTION> <OPTION value=北京服装学院>北京服装学院</OPTION> 
-  <OPTION value=中国传媒大学>中国传媒大学</OPTION> <OPTION 
-  value=华北电力大学(北京)>华北电力大学(北京)</OPTION> <OPTION 
-  value=中国石油大学(北京)>中国石油大学(北京)</OPTION> <OPTION value=首都医科大学>首都医科大学</OPTION> 
-  <OPTION value=中国协和医科大学>中国协和医科大学</OPTION> <OPTION 
-  value=中国青年政治学院>中国青年政治学院</OPTION> <OPTION value=首都经济贸易大学>首都经济贸易大学</OPTION> 
-  <OPTION value=北京教育学院>北京教育学院</OPTION> <OPTION value=国际关系学院>国际关系学院</OPTION> 
-  <OPTION value=中华女子学院>中华女子学院</OPTION> <OPTION value=北京石油化工学院>北京石油化工学院</OPTION> 
-  <OPTION value=北京建筑工程学院>北京建筑工程学院</OPTION> <OPTION 
-  value=北京电子科技学院>北京电子科技学院</OPTION> <OPTION value=中国人民公安大学>中国人民公安大学</OPTION> 
-  <OPTION value=北京物资学院>北京物资学院</OPTION> <OPTION 
-value=北京印刷学院>北京印刷学院</OPTION></SELECT></DIV>
+  value="">请选择高校</OPTION> 
+</SELECT></DIV>
 <!--
 <DIV><LABEL for=confirm_password>高中母校</LABEL> <INPUT id=high_school 
 class=zcinput maxLength=50 size=35 type=text name=high_school> <SPAN 
@@ -306,173 +333,143 @@ class=zsbg>请填全称！</SPAN> </DIV>
 <DIV style="DISPLAY: none" id=school1>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>毕业高校</LABEL> 
 <SELECT id=tea_school2 name="ttedu_biyexuexiao3"> <OPTION selected 
-  value="">请选择高校</OPTION> <OPTION value=北京大学>北京大学</OPTION> <OPTION 
-  value=清华大学>清华大学</OPTION> <OPTION value=中国人民大学>中国人民大学</OPTION> <OPTION 
-  value=北京师范大学>北京师范大学</OPTION> <OPTION value=北京交通大学>北京交通大学</OPTION> <OPTION 
-  value=首都师范大学>首都师范大学</OPTION> <OPTION value=北京第二外国语学院>北京第二外国语学院</OPTION> 
-  <OPTION value=北京邮电大学>北京邮电大学</OPTION> <OPTION value=北京理工大学>北京理工大学</OPTION> 
-  <OPTION value=北京外国语大学>北京外国语大学</OPTION> <OPTION value=北京科技大学>北京科技大学</OPTION> 
-  <OPTION value=中央音乐学院>中央音乐学院</OPTION> <OPTION value=中央美术学院>中央美术学院</OPTION> 
-  <OPTION value=中国政法大学>中国政法大学</OPTION> <OPTION value=北京语言大学>北京语言大学</OPTION> 
-  <OPTION value=中央财经大学>中央财经大学</OPTION> <OPTION value=中国音乐学院>中国音乐学院</OPTION> 
-  <OPTION value=北京化工大学>北京化工大学</OPTION> <OPTION value=外交学院>外交学院</OPTION> <OPTION 
-  value=中央戏剧学院>中央戏剧学院</OPTION> <OPTION value=中国戏曲学院>中国戏曲学院</OPTION> <OPTION 
-  value=北京舞蹈学院>北京舞蹈学院</OPTION> <OPTION value=北京电影学院>北京电影学院</OPTION> <OPTION 
-  value=首都体育学院>首都体育学院</OPTION> <OPTION value=北京体育大学>北京体育大学</OPTION> <OPTION 
-  value=中国科学院研究生院>中国科学院研究生院</OPTION> <OPTION value=北京航空航天大学>北京航空航天大学</OPTION> 
-  <OPTION value=对外经济贸易大学>对外经济贸易大学</OPTION> <OPTION value=北京工业大学>北京工业大学</OPTION> 
-  <OPTION value=中国矿业大学(北京)>中国矿业大学(北京)</OPTION> <OPTION 
-  value=中国农业大学>中国农业大学</OPTION> <OPTION value=北京林业大学>北京林业大学</OPTION> <OPTION 
-  value=中央民族大学>中央民族大学</OPTION> <OPTION value=中国地质大学(北京)>中国地质大学(北京)</OPTION> 
-  <OPTION value=北方工业大学>北方工业大学</OPTION> <OPTION value=北京工商大学>北京工商大学</OPTION> 
-  <OPTION value=北京中医药大学>北京中医药大学</OPTION> <OPTION value=北京服装学院>北京服装学院</OPTION> 
-  <OPTION value=中国传媒大学>中国传媒大学</OPTION> <OPTION 
-  value=华北电力大学(北京)>华北电力大学(北京)</OPTION> <OPTION 
-  value=中国石油大学(北京)>中国石油大学(北京)</OPTION> <OPTION value=首都医科大学>首都医科大学</OPTION> 
-  <OPTION value=中国协和医科大学>中国协和医科大学</OPTION> <OPTION 
-  value=中国青年政治学院>中国青年政治学院</OPTION> <OPTION value=首都经济贸易大学>首都经济贸易大学</OPTION> 
-  <OPTION value=北京教育学院>北京教育学院</OPTION> <OPTION value=国际关系学院>国际关系学院</OPTION> 
-  <OPTION value=中华女子学院>中华女子学院</OPTION> <OPTION value=北京石油化工学院>北京石油化工学院</OPTION> 
-  <OPTION value=北京建筑工程学院>北京建筑工程学院</OPTION> <OPTION 
-  value=北京电子科技学院>北京电子科技学院</OPTION> <OPTION value=中国人民公安大学>中国人民公安大学</OPTION> 
-  <OPTION value=北京物资学院>北京物资学院</OPTION> <OPTION 
-value=北京印刷学院>北京印刷学院</OPTION></SELECT></DIV></DIV><!-- 教师隐藏区域开始 -->
+  value="">请选择高校</OPTION> 
+</SELECT></DIV></DIV><!-- 教师隐藏区域开始 -->
 <DIV style="DISPLAY: none" id=teacher1>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>毕业高校</LABEL> 
 <SELECT id=tea_school name="ttedu_biyexuexiao2"> <OPTION selected 
-  value="">请选择高校</OPTION> <OPTION value=北京大学>北京大学</OPTION> <OPTION 
-  value=清华大学>清华大学</OPTION> <OPTION value=中国人民大学>中国人民大学</OPTION> <OPTION 
-  value=北京师范大学>北京师范大学</OPTION> <OPTION value=北京交通大学>北京交通大学</OPTION> <OPTION 
-  value=首都师范大学>首都师范大学</OPTION> <OPTION value=北京第二外国语学院>北京第二外国语学院</OPTION> 
-  <OPTION value=北京邮电大学>北京邮电大学</OPTION> <OPTION value=北京理工大学>北京理工大学</OPTION> 
-  <OPTION value=北京外国语大学>北京外国语大学</OPTION> <OPTION value=北京科技大学>北京科技大学</OPTION> 
-  <OPTION value=中央音乐学院>中央音乐学院</OPTION> <OPTION value=中央美术学院>中央美术学院</OPTION> 
-  <OPTION value=中国政法大学>中国政法大学</OPTION> <OPTION value=北京语言大学>北京语言大学</OPTION> 
-  <OPTION value=中央财经大学>中央财经大学</OPTION> <OPTION value=中国音乐学院>中国音乐学院</OPTION> 
-  <OPTION value=北京化工大学>北京化工大学</OPTION> <OPTION value=外交学院>外交学院</OPTION> <OPTION 
-  value=中央戏剧学院>中央戏剧学院</OPTION> <OPTION value=中国戏曲学院>中国戏曲学院</OPTION> <OPTION 
-  value=北京舞蹈学院>北京舞蹈学院</OPTION> <OPTION value=北京电影学院>北京电影学院</OPTION> <OPTION 
-  value=首都体育学院>首都体育学院</OPTION> <OPTION value=北京体育大学>北京体育大学</OPTION> <OPTION 
-  value=中国科学院研究生院>中国科学院研究生院</OPTION> <OPTION value=北京航空航天大学>北京航空航天大学</OPTION> 
-  <OPTION value=对外经济贸易大学>对外经济贸易大学</OPTION> <OPTION value=北京工业大学>北京工业大学</OPTION> 
-  <OPTION value=中国矿业大学(北京)>中国矿业大学(北京)</OPTION> <OPTION 
-  value=中国农业大学>中国农业大学</OPTION> <OPTION value=北京林业大学>北京林业大学</OPTION> <OPTION 
-  value=中央民族大学>中央民族大学</OPTION> <OPTION value=中国地质大学(北京)>中国地质大学(北京)</OPTION> 
-  <OPTION value=北方工业大学>北方工业大学</OPTION> <OPTION value=北京工商大学>北京工商大学</OPTION> 
-  <OPTION value=北京中医药大学>北京中医药大学</OPTION> <OPTION value=北京服装学院>北京服装学院</OPTION> 
-  <OPTION value=中国传媒大学>中国传媒大学</OPTION> <OPTION 
-  value=华北电力大学(北京)>华北电力大学(北京)</OPTION> <OPTION 
-  value=中国石油大学(北京)>中国石油大学(北京)</OPTION> <OPTION value=首都医科大学>首都医科大学</OPTION> 
-  <OPTION value=中国协和医科大学>中国协和医科大学</OPTION> <OPTION 
-  value=中国青年政治学院>中国青年政治学院</OPTION> <OPTION value=首都经济贸易大学>首都经济贸易大学</OPTION> 
-  <OPTION value=北京教育学院>北京教育学院</OPTION> <OPTION value=国际关系学院>国际关系学院</OPTION> 
-  <OPTION value=中华女子学院>中华女子学院</OPTION> <OPTION value=北京石油化工学院>北京石油化工学院</OPTION> 
-  <OPTION value=北京建筑工程学院>北京建筑工程学院</OPTION> <OPTION 
-  value=北京电子科技学院>北京电子科技学院</OPTION> <OPTION value=中国人民公安大学>中国人民公安大学</OPTION> 
-  <OPTION value=北京物资学院>北京物资学院</OPTION> <OPTION 
-value=北京印刷学院>北京印刷学院</OPTION></SELECT></DIV>
+  value="">请选择高校</OPTION> 
+</SELECT></DIV>
 <DIV><LABEL for=confirm_password>(最近)任职学校</LABEL> 
 <INPUT id=teach_school class=zcinput maxLength=50 size=35 type=text 
 name="ttedu_renjiaoxuexiao"> </DIV>
 <DIV><LABEL for=confirm_password>任教学科</LABEL> 
 <SELECT id=teach_subject class=zcinput name="ttedu_zuinanshoukemu"> <OPTION selected 
-  value="">请选择任教学科</OPTION> <OPTION value=学前教育>学前教育</OPTION> <OPTION 
-  value=英语>英语</OPTION> <OPTION value=语文>语文</OPTION> <OPTION value=数学>数学</OPTION> 
-  <OPTION value=物理>物理</OPTION> <OPTION value=化学>化学</OPTION> <OPTION 
-  value=奥数>奥数</OPTION> <OPTION value=生物>生物</OPTION> <OPTION value=地理>地理</OPTION> 
-  <OPTION value=历史>历史</OPTION> <OPTION value=政治>政治</OPTION> <OPTION 
-  value=体育>体育</OPTION> <OPTION value=音乐>音乐</OPTION> <OPTION value=美术>美术</OPTION> 
-  <OPTION value=高等数学>高等数学</OPTION> <OPTION value=""></OPTION> <OPTION 
-  value=普通话>普通话</OPTION> <OPTION value=""></OPTION> <OPTION value=日语>日语</OPTION> 
-  <OPTION value=法语>法语</OPTION> <OPTION value=德语>德语</OPTION> <OPTION 
-  value=韩语>韩语</OPTION> <OPTION value=俄语>俄语</OPTION> <OPTION 
-  value=希腊语>希腊语</OPTION> <OPTION value=瑞典语>瑞典语</OPTION> <OPTION 
-  value=荷兰语>荷兰语</OPTION> <OPTION value=意大利语>意大利语</OPTION> <OPTION 
-  value=西班牙语>西班牙语</OPTION> <OPTION value=葡萄牙语>葡萄牙语</OPTION> <OPTION 
-  value=阿拉伯语>阿拉伯语</OPTION> <OPTION value=乌克兰语>乌克兰语</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=摄影>摄影</OPTION> <OPTION value=书法>书法</OPTION> 
-  <OPTION value=舞蹈>舞蹈</OPTION> <OPTION value=声乐>声乐</OPTION> <OPTION 
-  value=钢琴>钢琴</OPTION> <OPTION value=电子琴>电子琴</OPTION> <OPTION 
-  value=小提琴>小提琴</OPTION> <OPTION value=大提琴>大提琴</OPTION> <OPTION 
-  value=长笛>长笛</OPTION> <OPTION value=吉它>吉它</OPTION> <OPTION 
-  value=手风琴>手风琴</OPTION> <OPTION value=萨克斯>萨克斯</OPTION> <OPTION 
-  value=单簧管>单簧管</OPTION> <OPTION value=双簧管>双簧管</OPTION> <OPTION 
-  value=打击乐>打击乐</OPTION> <OPTION value=小号>小号</OPTION> <OPTION 
-  value=大号>大号</OPTION> <OPTION value=圆号>圆号</OPTION> <OPTION 
-  value=打击乐>打击乐</OPTION> <OPTION value=二胡>二胡</OPTION> <OPTION 
-  value=笛子>笛子</OPTION> <OPTION value=琵琶>琵琶</OPTION> <OPTION value=古筝>古筝</OPTION> 
-  <OPTION value=唢呐>唢呐</OPTION> <OPTION value=扬琴>扬琴</OPTION> <OPTION 
-  value=柳琴>柳琴</OPTION> <OPTION value=中阮>中阮</OPTION> <OPTION value=古琴>古琴</OPTION> 
-  <OPTION value=三弦>三弦</OPTION> <OPTION value=板胡>板胡</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=计算机>计算机</OPTION> <OPTION 
-  value=数据库>数据库</OPTION> <OPTION value=网页设计与制作>网页设计与制作</OPTION> <OPTION 
-  value=Linux或Unix>Linux或Unix</OPTION> <OPTION value=图像处理软件>图像处理软件</OPTION> 
-  <OPTION value=动画制作>动画制作</OPTION> <OPTION value=程序设计>程序设计</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=围棋>围棋</OPTION> <OPTION 
-  value=中国象棋>中国象棋</OPTION> <OPTION value=国际象棋>国际象棋</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=中国武术>中国武术</OPTION> <OPTION 
-  value=气功>气功</OPTION> <OPTION value=拳击柔道跆拳道>拳击柔道跆拳道</OPTION> <OPTION 
-  value=交谊舞>交谊舞</OPTION> <OPTION value=跆拳道>跆拳道</OPTION> <OPTION 
-  value=空手道>空手道</OPTION> <OPTION value=瑜珈>瑜珈</OPTION> <OPTION 
-  value=体操>体操</OPTION> <OPTION value=健身减肥养身>健身减肥养身</OPTION> <OPTION 
-  value=滑雪滑冰旱冰>滑雪滑冰旱冰</OPTION> <OPTION value=游泳潜水跳水>游泳潜水跳水</OPTION> <OPTION 
-  value=高尔夫>高尔夫</OPTION> <OPTION value=保龄球>保龄球</OPTION> <OPTION 
-  value=乒乓球>乒乓球</OPTION> <OPTION value=羽毛球>羽毛球</OPTION> <OPTION 
-  value=网球>网球</OPTION> <OPTION value=足球>足球</OPTION> <OPTION value=篮球>篮球</OPTION> 
-  <OPTION value=排球>排球</OPTION> <OPTION value=体育健身类其他>体育健身类其他</OPTION> <OPTION 
-  value=""></OPTION> <OPTION value=其他学科>其他学科</OPTION></SELECT> </DIV>
+  value="">请选择任教学科</OPTION> 
+<OPTION value=学前教育>学前教育</OPTION> 
+<OPTION 
+  value=英语>英语</OPTION> 
+<OPTION value=语文>语文</OPTION> 
+<OPTION value=数学>数学</OPTION> 
+  <OPTION value=物理>物理</OPTION> 
+<OPTION value=化学>化学</OPTION> 
+<OPTION 
+  value=奥数>奥数</OPTION> 
+<OPTION value=生物>生物</OPTION> 
+<OPTION value=地理>地理</OPTION> 
+  <OPTION value=历史>历史</OPTION> 
+<OPTION value=政治>政治</OPTION> 
+</SELECT> </DIV>
 <DIV><LABEL for=confirm_password>任职学校类别</LABEL> 
 <SELECT id=important_level name="ttedu_xuexiaoleibie"> <OPTION selected 
-  value="">请选择类别</OPTION> <OPTION value=非北京地区幼儿园>非北京地区幼儿园</OPTION> <OPTION 
-  value=非北京地区小学>非北京地区小学</OPTION> <OPTION value=非北京地区普通初中>非北京地区普通初中</OPTION> 
-  <OPTION value=非北京地区重点初中>非北京地区重点初中</OPTION> <OPTION 
-  value=非北京地区普通高中>非北京地区普通高中</OPTION> <OPTION value=非北京地区重点高中>非北京地区重点高中</OPTION> 
-  <OPTION value=非北京地区大学>非北京地区大学</OPTION> <OPTION 
-  value=非北京地区专业培训机构>非北京地区专业培训机构</OPTION> <OPTION 
-  value=非北京地区其他学校>非北京地区其他学校</OPTION> <OPTION value=北京，幼儿园>北京，幼儿园</OPTION> 
-  <OPTION value=北京，小学>北京，小学</OPTION> <OPTION value=北京，普通初中>北京，普通初中</OPTION> 
-  <OPTION value=北京，重点初中>北京，重点初中</OPTION> <OPTION value=北京，私立初中>北京，私立初中</OPTION> 
-  <OPTION value=北京，普通高中>北京，普通高中</OPTION> <OPTION 
-  value=北京，区重点高中>北京，区重点高中</OPTION> <OPTION value=北京，市重点高中>北京，市重点高中</OPTION> 
-  <OPTION value=北京，私立高中>北京，私立高中</OPTION> <OPTION value=北京，大学>北京，大学</OPTION> 
-  <OPTION value=北京，专业培训机构>北京，专业培训机构</OPTION> <OPTION 
+  value="">请选择类别</OPTION> 
+<OPTION value=非北京地区幼儿园>非北京地区幼儿园</OPTION> 
+<OPTION 
+  value=非北京地区小学>非北京地区小学</OPTION> 
+<OPTION value=非北京地区普通初中>非北京地区普通初中</OPTION> 
+  <OPTION value=非北京地区重点初中>非北京地区重点初中</OPTION> 
+<OPTION 
+  value=非北京地区普通高中>非北京地区普通高中</OPTION> 
+<OPTION value=非北京地区重点高中>非北京地区重点高中</OPTION> 
+  <OPTION value=非北京地区大学>非北京地区大学</OPTION> 
+<OPTION 
+  value=非北京地区专业培训机构>非北京地区专业培训机构</OPTION> 
+<OPTION 
+  value=非北京地区其他学校>非北京地区其他学校</OPTION> 
+<OPTION value=北京，幼儿园>北京，幼儿园</OPTION> 
+  <OPTION value=北京，小学>北京，小学</OPTION> 
+<OPTION value=北京，普通初中>北京，普通初中</OPTION> 
+  <OPTION value=北京，重点初中>北京，重点初中</OPTION> 
+<OPTION value=北京，私立初中>北京，私立初中</OPTION> 
+  <OPTION value=北京，普通高中>北京，普通高中</OPTION> 
+<OPTION 
+  value=北京，区重点高中>北京，区重点高中</OPTION> 
+<OPTION value=北京，市重点高中>北京，市重点高中</OPTION> 
+  <OPTION value=北京，私立高中>北京，私立高中</OPTION> 
+<OPTION value=北京，大学>北京，大学</OPTION> 
+  <OPTION value=北京，专业培训机构>北京，专业培训机构</OPTION> 
+<OPTION 
   value=北京，其他学校>北京，其他学校</OPTION></SELECT> </DIV>
 <DIV><LABEL for=confirm_password>教 　龄</LABEL> <INPUT 
 id=teach_age class=zcinput maxLength=15 size=35 type=text name="ttedu_old"> </DIV>
 <!--
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>职称等级</LABEL> 
 <SELECT id=technical_level name=technical_level> <OPTION selected 
-  value="">请选择职称等级</OPTION> <OPTION value=尚无职称等级>尚无职称等级</OPTION> <OPTION 
-  value=幼儿教师>幼儿教师</OPTION> <OPTION value=小学二级教师>小学二级教师</OPTION> <OPTION 
-  value=小学一级教师>小学一级教师</OPTION> <OPTION value=小学高级教师>小学高级教师</OPTION> <OPTION 
-  value=小学特级教师>小学特级教师</OPTION> <OPTION value=中学二级教师>中学二级教师</OPTION> <OPTION 
-  value=中学一级教师>中学一级教师</OPTION> <OPTION value=中学高级教师>中学高级教师</OPTION> <OPTION 
-  value=中学特级教师>中学特级教师</OPTION> <OPTION value=大学助教>大学助教</OPTION> <OPTION 
-  value=大学讲师>大学讲师</OPTION> <OPTION value=副教授>副教授</OPTION> <OPTION 
+  value="">请选择职称等级</OPTION> 
+<OPTION value=尚无职称等级>尚无职称等级</OPTION> 
+<OPTION 
+  value=幼儿教师>幼儿教师</OPTION> 
+<OPTION value=小学二级教师>小学二级教师</OPTION> 
+<OPTION 
+  value=小学一级教师>小学一级教师</OPTION> 
+<OPTION value=小学高级教师>小学高级教师</OPTION> 
+<OPTION 
+  value=小学特级教师>小学特级教师</OPTION> 
+<OPTION value=中学二级教师>中学二级教师</OPTION> 
+<OPTION 
+  value=中学一级教师>中学一级教师</OPTION> 
+<OPTION value=中学高级教师>中学高级教师</OPTION> 
+<OPTION 
+  value=中学特级教师>中学特级教师</OPTION> 
+<OPTION value=大学助教>大学助教</OPTION> 
+<OPTION 
+  value=大学讲师>大学讲师</OPTION> 
+<OPTION value=副教授>副教授</OPTION> 
+<OPTION 
   value=正教授>正教授</OPTION></SELECT> </DIV>
  --> 
   </DIV><!-- 教师隐藏区域结束 -->
 <DIV class=btbg2><IMG src="Public/images/zcimg2.gif">请填写联系方式</DIV>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>生活住所</LABEL> 
 <SELECT id=address1 name="ttedu_address"> <OPTION selected value="">请选择生活住所</OPTION> 
-  <OPTION value=海淀>海淀</OPTION> <OPTION value=朝阳>朝阳</OPTION> <OPTION 
-  value=东城>东城</OPTION> <OPTION value=西城>西城</OPTION> <OPTION value=崇文>崇文</OPTION> 
-  <OPTION value=宣武>宣武</OPTION> <OPTION value=丰台>丰台</OPTION> <OPTION 
-  value=石景山>石景山</OPTION> <OPTION value=房山>房山</OPTION> <OPTION 
-  value=门头沟>门头沟</OPTION> <OPTION value=通州>通州</OPTION> <OPTION 
-  value=昌平>昌平</OPTION> <OPTION value=密云>密云</OPTION> <OPTION value=怀柔>怀柔</OPTION> 
-  <OPTION value=延庆>延庆</OPTION> <OPTION value=平谷>平谷</OPTION> <OPTION 
-  value=大兴>大兴</OPTION> <OPTION value=顺义>顺义</OPTION></SELECT> </DIV>
+  <OPTION value=海淀>海淀</OPTION> 
+<OPTION value=朝阳>朝阳</OPTION> 
+<OPTION 
+  value=东城>东城</OPTION> 
+<OPTION value=西城>西城</OPTION> 
+<OPTION value=崇文>崇文</OPTION> 
+  <OPTION value=宣武>宣武</OPTION> 
+<OPTION value=丰台>丰台</OPTION> 
+<OPTION 
+  value=石景山>石景山</OPTION> 
+<OPTION value=房山>房山</OPTION> 
+<OPTION 
+  value=门头沟>门头沟</OPTION> 
+<OPTION value=通州>通州</OPTION> 
+<OPTION 
+  value=昌平>昌平</OPTION> 
+<OPTION value=密云>密云</OPTION> 
+<OPTION value=怀柔>怀柔</OPTION> 
+  <OPTION value=延庆>延庆</OPTION> 
+<OPTION value=平谷>平谷</OPTION> 
+<OPTION 
+  value=大兴>大兴</OPTION> 
+<OPTION value=顺义>顺义</OPTION></SELECT> </DIV>
 <DIV><LABEL for=confirm_password><STRONG class=red>*</STRONG>工作住所</LABEL> 
 <SELECT id=address2 name="ttedu_gongzuozhusuo"> <OPTION selected value="">请选择工作住所</OPTION> 
-  <OPTION value=海淀>海淀</OPTION> <OPTION value=朝阳>朝阳</OPTION> <OPTION 
-  value=东城>东城</OPTION> <OPTION value=西城>西城</OPTION> <OPTION value=崇文>崇文</OPTION> 
-  <OPTION value=宣武>宣武</OPTION> <OPTION value=丰台>丰台</OPTION> <OPTION 
-  value=石景山>石景山</OPTION> <OPTION value=房山>房山</OPTION> <OPTION 
-  value=门头沟>门头沟</OPTION> <OPTION value=通州>通州</OPTION> <OPTION 
-  value=昌平>昌平</OPTION> <OPTION value=密云>密云</OPTION> <OPTION value=怀柔>怀柔</OPTION> 
-  <OPTION value=延庆>延庆</OPTION> <OPTION value=平谷>平谷</OPTION> <OPTION 
-  value=大兴>大兴</OPTION> <OPTION value=顺义>顺义</OPTION></SELECT> </DIV>
+  <OPTION value=海淀>海淀</OPTION> 
+<OPTION value=朝阳>朝阳</OPTION> 
+<OPTION 
+  value=东城>东城</OPTION> 
+<OPTION value=西城>西城</OPTION> 
+<OPTION value=崇文>崇文</OPTION> 
+  <OPTION value=宣武>宣武</OPTION> 
+<OPTION value=丰台>丰台</OPTION> 
+<OPTION 
+  value=石景山>石景山</OPTION> 
+<OPTION value=房山>房山</OPTION> 
+<OPTION 
+  value=门头沟>门头沟</OPTION> 
+<OPTION value=通州>通州</OPTION> 
+<OPTION 
+  value=昌平>昌平</OPTION> 
+<OPTION value=密云>密云</OPTION> 
+<OPTION value=怀柔>怀柔</OPTION> 
+  <OPTION value=延庆>延庆</OPTION> 
+<OPTION value=平谷>平谷</OPTION> 
+<OPTION 
+  value=大兴>大兴</OPTION> 
+<OPTION value=顺义>顺义</OPTION></SELECT> </DIV>
 <DIV><LABEL for=confirm_password>电　　话</LABEL> <INPUT id=telephone class=zcinput 
 maxLength=15 size=35 type=text name="ttedu_beiyongdianhua"> </DIV>
 <DIV><LABEL for=confirm_password>MSN</LABEL> <INPUT id=msn class=zcinput 
@@ -505,12 +502,107 @@ maxLength=15 size=35 type=text name="ttedu_youbian"> </DIV>
 <DIV>
 <DIV><LABEL for=confirm_password>薪水要求</LABEL> <INPUT id=post_code class=zcinput 
 maxLength=15 size=15 type=text name="ttedu_xingshuiyaoqiu" value="面议"> &nbsp;例如：50元/小时</DIV>
+
+
+
+
 <DIV>
+<DIV class=div1><LABEL for=confirm_password style="width:80px"><STRONG 
+class=red>*</STRONG>可教授科目<BR>(最多选15项，多余部分将被系统自动丢弃！)</LABEL> <SELECT 
+style="WIDTH: 170px" id=FirstJob class=zcinput size=10 name="FirstJob">
+<OPTION
+  value=小学语文>小学语文</OPTION> 
+<OPTION 
+  value=小学数学>小学数学</OPTION> 
+<OPTION
+  value=小学英语>小学英语</OPTION> 
+<OPTION 
+  value=------------------>------------------</OPTION> 
+<OPTION 
+  value=初中历史>初中历史</OPTION> 
+<OPTION 
+  value=初中地理>初中地理</OPTION> 
+<OPTION 
+  value=初中生物>初中生物</OPTION> 
+<OPTION 
+  value=初中政治>初中政治</OPTION> 
+<OPTION 
+  value=初中语文>初中语文</OPTION> 
+<OPTION 
+  value=初中英语>初中英语</OPTION> 
+<OPTION 
+  value=初中数学>初中数学</OPTION> 
+<OPTION 
+  value=初中物理>初中物理</OPTION> 
+<OPTION 
+  value=初中化学>初中化学</OPTION> 
+<OPTION 
+  value=------------------>------------------</OPTION> 
+<OPTION 
+  value=高中历史>高中历史</OPTION> 
+<OPTION 
+  value=高中地理>高中地理</OPTION> 
+<OPTION
+  value=高中政治>高中政治</OPTION> 
+<OPTION 
+  value=高中生物>高中生物</OPTION> 
+<OPTION 
+  value=高中语文>高中语文</OPTION> 
+<OPTION 
+  value=高中英语>高中英语</OPTION> 
+<OPTION
+  value=高中数学>高中数学</OPTION> 
+<OPTION 
+  value=高中物理>高中物理</OPTION> 
+<OPTION
+  value=高中化学>高中化学</OPTION> 
+</SELECT> </DIV>
+<DIV class=div2><SPAN class=span1><INPUT class=butblue onclick=javascript:addloc($("#FirstJob").find("option:selected").text(),$("#MyFirstJob").get(0)) value="选 取>>>" type=button name=FTianJia><BR>选中左侧项目点“选取”即可添加；选中右侧项目点“删除”即可删除<BR><INPUT class=butblue onclick=JavaScript:delloc($("#MyFirstJob").get(0)) value="<<<删 除" type=button name=FShanChu></SPAN> 
+<SELECT style="WIDTH: 170px" id="MyFirstJob" class=zcinput multiple size=10 name=MyFirstJob></SELECT>
+<INPUT type=hidden id="ttedu_renjiaoxueke" name="ttedu_renjiaoxueke"> </DIV></DIV><!-- 可教授科目结束 -->
+
 
 <DIV><LABEL for=confirm_password>所获证书</LABEL> 
 <textarea name="ttedu_zhengshu" cols="23" rows="3" class="zcinput"></textarea>&nbsp;例如：英语四级，六级</DIV>
 <DIV><LABEL for=confirm_password>适合家教时间</LABEL> 
 <textarea name="ttedu_keyijiajiaoshijian" cols="23" rows="3" class="zcinput"></textarea></DIV>
+
+
+<DIV><DIV class=div1 ><LABEL for=confirm_password style="width:80px"><STRONG 
+class=red>*</STRONG>可教授区域<BR>(最多选15项，多余部分将被系统自动丢弃！)</LABEL> <SELECT 
+style="WIDTH: 170px" id=FirstTeachPlace class=zcinput size=8 
+name="FirstTeachPlace"> <OPTION value=无要求>无要求</OPTION> 
+<OPTION 
+  value=海淀>海淀</OPTION> 
+<OPTION value=朝阳>朝阳</OPTION> 
+<OPTION value=东城>东城</OPTION> 
+  <OPTION value=西城>西城</OPTION> 
+<OPTION value=崇文>崇文</OPTION> 
+<OPTION 
+  value=宣武>宣武</OPTION> 
+<OPTION value=丰台>丰台</OPTION> 
+<OPTION 
+  value=石景山>石景山</OPTION> 
+<OPTION value=房山>房山</OPTION> 
+<OPTION 
+  value=门头沟>门头沟</OPTION> 
+<OPTION value=通州>通州</OPTION> 
+<OPTION 
+  value=昌平>昌平</OPTION> 
+<OPTION value=密云>密云</OPTION> 
+<OPTION value=怀柔>怀柔</OPTION> 
+  <OPTION value=延庆>延庆</OPTION> 
+<OPTION value=平谷>平谷</OPTION> 
+<OPTION 
+  value=大兴>大兴</OPTION> 
+<OPTION value=顺义>顺义</OPTION></SELECT> </DIV>
+<DIV class=div2><SPAN class=span1><INPUT class=butblue onclick=JavaScript:addloc($("#FirstTeachPlace").find("option:selected").text(),$("#SecondTeachPlace").get(0)) value="选 取>>>" type=button name=FTianJia2> 
+<BR>选中左侧项目点“选取”即可添加；选中右侧项目点“删除”即可删除<BR><INPUT class=butblue onclick=JavaScript:delloc($("#SecondTeachPlace").get(0)) value="<<<删 除" type=button name=FShanChu2> 
+</SPAN><INPUT type=hidden name="ttedu_jiajiaodiqu" id="ttedu_jiajiaodiqu"> <SELECT style="WIDTH: 170px" 
+id=SecondTeachPlace class=zcinput multiple size=8 name=SecondTeachPlace></SELECT> 
+</DIV></DIV>
+
+
 
 <DIV><LABEL for=confirm_password>自我详细介绍</LABEL> 
 <textarea name="ttedu_xiangxijieshao" cols="50" rows="7" class="zcinput"></textarea></DIV>
